@@ -1,0 +1,63 @@
+/* css/freelancer.css */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+.pricing-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.pricing-card.popular {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+.popular-badge {
+  position: absolute;
+  top: -15px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-btn);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px var(--primary-glow);
+}
+.pricing-card h3 {
+  font-size: 1.5rem; margin-bottom: 1rem;
+}
+.price {
+  font-size: 4rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem;
+}
+.price span {
+  font-size: 1.5rem; vertical-align: top; margin-right: 5px; color: var(--text-main);
+}
+.plan-desc {
+  color: var(--text-muted); margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border-glass);
+}
+.plan-features {
+  list-style: none; margin-bottom: 2rem; text-align: left;
+}
+.plan-features li {
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem;
+}
+.plan-features i { font-size: 1.2rem; }
+.plan-features .ri-check-line { color: #10B981; }
+
+.w-100 { width: 100%; }
+
+.benefits-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;
+}
+.benefit-box i {
+  font-size: 3rem; color: var(--primary); margin-bottom: 1rem; display: inline-block;
+}
+.benefit-box h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.benefit-box p { color: var(--text-muted); font-size: 0.95rem; }
+
+@media (max-width: 1024px) {
+  .pricing-card.popular { transform: scale(1); }
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Stackly Portfolio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/userdashboard.css">
+    <link rel="stylesheet" href="css/admindashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" rel="stylesheet">
+    <!-- Chart.js for Admin Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/logo.webp" alt="Logo">
+                </a>
+                <button class="close-sidebar d-md-none"><i class="ri-close-line"></i></button>
+            </div>
+            
+            <div class="user-info text-center mt-4 mb-4">
+                <img src="assets/hero.webp" alt="Admin Profile" class="dashboard-avatar">
+                <h4>Jack Dawson</h4>
+                <p class="text-muted text-sm">Super Admin</p>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li><a href="admindashboard.html" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
+                <li><a href="#"><i class="ri-briefcase-4-line"></i> Projects</a></li>
+                <li><a href="#"><i class="ri-article-line"></i> Blogs</a></li>
+                <li><a href="#"><i class="ri-service-line"></i> Services</a></li>
+                <li><a href="#"><i class="ri-tools-fill"></i> Skills</a></li>
+                <li><a href="#"><i class="ri-message-2-line"></i> Messages</a></li>
+                <li><a href="#"><i class="ri-team-line"></i> Visitors</a></li>
+                <li><a href="#"><i class="ri-bar-chart-box-line"></i> Analytics</a></li>
+                <li><a href="#"><i class="ri-settings-4-line"></i> Settings</a></li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <a href="login.html" class="logout-btn"><i class="ri-logout-box-r-line"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Top Navbar -->
+            <header class="dashboard-nav glass-card">
+                <div class="nav-left">
+                    <button class="open-sidebar d-md-none"><i class="ri-menu-line"></i></button>
+                    <h2>Admin Overview</h2>
+                </div>
+                <div class="nav-right">
+                    <button class="theme-toggle"><i class="ri-sun-line"></i></button>
+                    <div class="nav-profile">
+                        <img src="assets/hero.webp" alt="Profile">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                
+                <div class="stats-grid mb-4">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="ri-eye-line"></i></div>
+                        <div class="stat-details">
+                            <h3>14.2k</h3>
+                            <p>Total Visitors</p>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="ri-folder-add-line"></i></div>
+                        <div class="stat-details">
+                            <h3>32</h3>
+                            <p>Projects Added</p>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="ri-mail-unread-line"></i></div>
+                        <div class="stat-details">
+                            <h3>128</h3>
+                            <p>New Messages</p>
+                        </div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="ri-article-line"></i></div>
+                        <div class="stat-details">
+                            <h3>45</h3>
+                            <p>Total Blogs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="charts-grid mb-4">
+                    <div class="chart-card glass-card">
+                        <h3 class="mb-3">Visitor Statistics (Line Chart)</h3>
+                        <div class="chart-container">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card glass-card">
+                        <h3 class="mb-3">Traffic Sources (Pie Chart)</h3>
+                        <div class="chart-container">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <!-- Bar Chart -->
+                    <div class="chart-card glass-card">
+                        <h3 class="mb-3">Weekly Traffic (Bar Graph)</h3>
+                        <div class="chart-container">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Recent Messages -->
+                    <div class="glass-card">
+                        <h3 class="mb-4">Recent Messages</h3>
+                        <div class="rec-list">
+                            <div class="rec-item">
+                                <div class="avatar-placeholder">A</div>
+                                <div>
+                                    <h4>Alice Johnson</h4>
+                                    <p>Discussing new project...</p>
+                                </div>
+                                <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">2m ago</span>
+                            </div>
+                            <div class="rec-item">
+                                <div class="avatar-placeholder">M</div>
+                                <div>
+                                    <h4>Michael Brown</h4>
+                                    <p>Website redesign inquiry...</p>
+                                </div>
+                                <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">1h ago</span>
+                            </div>
+                            <div class="rec-item">
+                                <div class="avatar-placeholder">S</div>
+                                <div>
+                                    <h4>Sarah Smith</h4>
+                                    <p>Freelance rate question...</p>
+                                </div>
+                                <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">3h ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

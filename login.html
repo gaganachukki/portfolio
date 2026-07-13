@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Stackly Portfolio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="auth-split-page">
+        <!-- Left Panel -->
+        <div class="auth-left">
+            <div class="auth-left-content">
+                <a href="index.html" class="auth-logo">
+                    <img src="assets/logo.webp" alt="Logo">
+                </a>
+                
+                <h1 class="auth-hero-title">Welcome Back to <br><span>Stackly</span></h1>
+                <p class="auth-hero-desc">Access your dashboard to manage upcoming events, view bookings, and collaborate with our premium planners.</p>
+            </div>
+            
+            <div class="auth-testimonial">
+                <div class="stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                </div>
+                <p>"Managing our corporate gala was seamless thanks to the Stackly platform."</p>
+                <span class="author">- Sarah J., TechVentures</span>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="auth-right">
+            <a href="index.html" class="back-home"><i class="ri-arrow-left-line"></i> Back to Home</a>
+            
+            <div class="auth-form-container">
+                <div class="auth-form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to access your account</p>
+                </div>
+
+                <!-- Role Selector -->
+                <div class="role-selector">
+                    <div class="role-btn active" id="role-client">
+                        <i class="ri-user-line"></i>
+                        <span>Client</span>
+                    </div>
+                    <div class="role-btn" id="role-admin">
+                        <i class="ri-shield-user-line"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+
+                <form id="loginForm" class="custom-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-with-icon">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div style="display: flex; justify-content: space-between;">
+                            <label for="password">Password</label>
+                            <a href="#" class="forgot-pwd text-gradient">Forgot Password?</a>
+                        </div>
+                        <div class="input-with-icon">
+                            <input type="password" id="password" placeholder="Password" required>
+                            <i class="ri-eye-line toggle-pwd" onclick="togglePwd('password', this)"></i>
+                        </div>
+                    </div>
+
+                    <div class="auth-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <span>Remember Me</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-auth">Login</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html" class="text-gradient">Sign Up</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Role Selector logic
+        const roleClient = document.getElementById('role-client');
+        const roleAdmin = document.getElementById('role-admin');
+        
+        roleClient.addEventListener('click', () => {
+            roleClient.classList.add('active');
+            roleAdmin.classList.remove('active');
+        });
+        
+        roleAdmin.addEventListener('click', () => {
+            roleAdmin.classList.add('active');
+            roleClient.classList.remove('active');
+        });
+
+        // Toggle Password Visibility
+        function togglePwd(inputId, iconElement) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                iconElement.classList.replace('ri-eye-line', 'ri-eye-off-line');
+            } else {
+                input.type = 'password';
+                iconElement.classList.replace('ri-eye-off-line', 'ri-eye-line');
+            }
+        }
+    </script>
+    <script src="js/validation.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>

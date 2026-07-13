@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Portfolio - Frontend Developer</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Remix Icons for Premium Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.webp" alt="Logo">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="freelancer.html" class="nav-link">Freelancer</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="ri-sun-line"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline">
+                    <i class="ri-user-line"></i> Login
+                </a>
+                <button class="menu-toggle">
+                    <i class="ri-menu-3-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-elements">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content reveal-left">
+                <div class="badge glass-card">Hello, I'm 👋</div>
+                <h1 class="hero-title">John <span class="text-gradient">Doe</span></h1>
+                <h2 class="hero-subtitle">Frontend Developer & UI/UX Designer</h2>
+                <p class="hero-desc">I design and build modern, responsive and user-friendly web experiences that make an impact.</p>
+                
+                <div class="hero-btns">
+                    <a href="projects.html" class="btn btn-primary">View My Work <i class="ri-arrow-right-line"></i></a>
+                    <a href="assets/resume.pdf" class="btn btn-outline" download>Download CV <i class="ri-download-line"></i></a>
+                </div>
+
+                <div class="hero-socials">
+                    <span>Follow Me</span>
+                    <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-dribbble-line"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper reveal-right">
+                <div class="hero-image-container">
+                    <img src="assets/hero.webp" alt="Jack Dawson" loading="lazy">
+                    
+                    <div class="floating-card freelance-card glass-card float-anim-1">
+                        <div class="status-dot"></div>
+                        <div class="card-info">
+                            <span>Available for</span>
+                            <strong>Freelance</strong>
+                        </div>
+                        <div class="icon-box">
+                            <i class="ri-send-plane-fill"></i>
+                        </div>
+                    </div>
+
+                    <div class="floating-icon tech-icon-1 float-anim-2 glass-card">
+                        <i class="ri-code-box-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Banner -->
+        <div class="container hero-stats-container reveal-up">
+            <div class="stats-banner glass-card">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ri-user-star-line"></i></div>
+                    <div class="stat-info">
+                        <h3 class="counter" data-target="3">0</h3><span>+</span>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ri-briefcase-4-line"></i></div>
+                    <div class="stat-info">
+                        <h3 class="counter" data-target="25">0</h3><span>+</span>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ri-trophy-line"></i></div>
+                    <div class="stat-info">
+                        <h3 class="counter" data-target="15">0</h3><span>+</span>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="ri-terminal-window-line"></i></div>
+                    <div class="stat-info">
+                        <h3 class="counter" data-target="10">0</h3><span>+</span>
+                        <p>Technologies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image reveal-left">
+                <div class="img-box">
+                    <img src="assets/about.webp" alt="About Me" loading="lazy">
+                    <div class="exp-badge glass-card float-anim-1">
+                        <h2>3+</h2>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-content reveal-right">
+                <h2 class="section-title text-left">About <span>Me</span></h2>
+                <h3 class="about-role">Passionate Frontend Developer & UI Designer</h3>
+                <p class="about-text">I specialize in building fast, scalable, and beautifully designed web applications. My journey started with a curiosity for how websites work, which quickly turned into a career of crafting pixel-perfect digital experiences.</p>
+                
+                <div class="about-details">
+                    <div class="detail-box">
+                        <h4><i class="ri-focus-3-line text-gradient"></i> Mission</h4>
+                        <p>To deliver high-quality, impactful web solutions.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4><i class="ri-eye-line text-gradient"></i> Vision</h4>
+                        <p>To become a leading voice in modern UI engineering.</p>
+                    </div>
+                    <div class="detail-box">
+                        <h4><i class="ri-flag-line text-gradient"></i> Career Objective</h4>
+                        <p>Continuously push the boundaries of web design.</p>
+                    </div>
+                </div>
+
+                <a href="about.html" class="btn btn-outline mt-4">Discover More <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills bg-alt" id="skills">
+        <div class="container">
+            <h2 class="section-title reveal-up">My <span>Skills</span></h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category reveal-left">
+                    <h3>Frontend Technologies</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>HTML5</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>CSS3 & SCSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>JavaScript (ES6+)</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>React.js</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category reveal-right">
+                    <h3>Frameworks & Tools</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Bootstrap & Tailwind CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git & GitHub</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Responsive Design</span>
+                            <span>100%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="100%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>UI/UX & Figma</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-width="75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title reveal-up">My <span>Services</span></h2>
+            
+            <div class="services-grid">
+                <div class="service-card glass-card reveal-up" style="transition-delay: 0.1s">
+                    <div class="service-icon"><i class="ri-window-line"></i></div>
+                    <h3>Website Development</h3>
+                    <p>Building fully functional and scalable web applications from scratch.</p>
+                </div>
+                
+                <div class="service-card glass-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="service-icon"><i class="ri-layout-4-line"></i></div>
+                    <h3>Landing Pages</h3>
+                    <p>High-converting, beautiful landing pages optimized for performance.</p>
+                </div>
+                
+                <div class="service-card glass-card reveal-up" style="transition-delay: 0.3s">
+                    <div class="service-icon"><i class="ri-smartphone-line"></i></div>
+                    <h3>Responsive Web Design</h3>
+                    <p>Ensuring your website looks perfect on all devices and screen sizes.</p>
+                </div>
+
+                <div class="service-card glass-card reveal-up" style="transition-delay: 0.4s">
+                    <div class="service-icon"><i class="ri-pen-nib-line"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Crafting intuitive and engaging user interfaces.</p>
+                </div>
+
+                <div class="service-card glass-card reveal-up" style="transition-delay: 0.5s">
+                    <div class="service-icon"><i class="ri-refresh-line"></i></div>
+                    <h3>Website Redesign</h3>
+                    <p>Revamping legacy websites with modern tech and premium design.</p>
+                </div>
+
+                <div class="service-card glass-card reveal-up" style="transition-delay: 0.6s">
+                    <div class="service-icon"><i class="ri-tools-line"></i></div>
+                    <h3>Website Maintenance</h3>
+                    <p>Ongoing support to keep your site updated, secure, and fast.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="projects bg-alt" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal-up">Featured <span>Projects</span></h2>
+            
+            <!-- Category Filter will be in projects.html, here just featured ones -->
+            <div class="projects-grid">
+                
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.1s">
+                    <div class="project-img">
+                        <img src="assets/project1.webp" alt="Project 1" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="ri-eye-line"></i></a>
+                            <a href="#" class="btn-icon"><i class="ri-github-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="category">Frontend</span>
+                        <h3>Modern Dashboard UI</h3>
+                        <p>A comprehensive admin dashboard with complex data visualizations.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span> <span>CSS</span> <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="project-img">
+                        <img src="assets/project2.webp" alt="Project 2" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="ri-eye-line"></i></a>
+                            <a href="#" class="btn-icon"><i class="ri-github-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="category">E-Commerce</span>
+                        <h3>Sneaker Store</h3>
+                        <p>Fully responsive premium landing page for a sneaker brand.</p>
+                        <div class="tech-stack">
+                            <span>HTML</span> <span>CSS</span> <span>JS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-up" style="transition-delay: 0.3s">
+                    <div class="project-img">
+                        <img src="assets/project3.webp" alt="Project 3" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="#" class="btn-icon"><i class="ri-eye-line"></i></a>
+                            <a href="#" class="btn-icon"><i class="ri-github-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <span class="category">Portfolio</span>
+                        <h3>Creative Agency</h3>
+                        <p>Award-winning portfolio template with smooth animations.</p>
+                        <div class="tech-stack">
+                            <span>React</span> <span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-5 reveal-up">
+                <a href="projects.html" class="btn btn-primary">View All Projects <i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Hire Me & Timeline -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title reveal-up">Experience & <span>Education</span></h2>
+            
+            <div class="timeline-wrapper">
+                <!-- Experience -->
+                <div class="timeline-column reveal-left">
+                    <h3><i class="ri-briefcase-line text-gradient"></i> Experience</h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2023 - Present</span>
+                        <h4>Senior Frontend Developer</h4>
+                        <p class="company">Tech Innovators Inc.</p>
+                        <p>Leading the frontend team to build highly scalable SaaS products.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2021 - 2023</span>
+                        <h4>Freelance Web Developer</h4>
+                        <p class="company">Self-Employed</p>
+                        <p>Delivered 20+ successful projects for clients worldwide.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2020 - 2021</span>
+                        <h4>UI/UX Intern</h4>
+                        <p class="company">Design Studio</p>
+                        <p>Assisted in wireframing, prototyping, and user research.</p>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="timeline-column reveal-right">
+                    <h3><i class="ri-graduation-cap-line text-gradient"></i> Education</h3>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2016 - 2020</span>
+                        <h4>Bachelor of Computer Science</h4>
+                        <p class="company">University of Technology</p>
+                        <p>Graduated with First Class Honors, specialized in Web Eng.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2021</span>
+                        <h4>Advanced JavaScript Certification</h4>
+                        <p class="company">Online Academy</p>
+                        <p>Mastered modern ES6+, async programming, and APIs.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-date">2022</span>
+                        <h4>UI/UX Design Masterclass</h4>
+                        <p class="company">Design Institute</p>
+                        <p>Deep dive into Figma, design systems, and interaction design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title reveal-up">Client <span>Testimonials</span></h2>
+            
+            <div class="slider-container reveal-up">
+                <div class="slider-track-wrapper">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <div class="testimonial-card glass-card">
+                                <div class="quote-icon"><i class="ri-double-quotes-l"></i></div>
+                                <p class="review">"John is an exceptional developer. He transformed our outdated website into a modern, high-performing platform that our users love. Highly recommended!"</p>
+                                <div class="client-info">
+                                    <img src="assets/testimonial1.webp" alt="Client 1">
+                                    <div class="client-details">
+                                        <h4>Sarah Johnson</h4>
+                                        <span>CEO, TechStart</span>
+                                        <div class="rating">
+                                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="testimonial-card glass-card">
+                                <div class="quote-icon"><i class="ri-double-quotes-l"></i></div>
+                                <p class="review">"The level of detail and quality of work is outstanding. The new UI design significantly improved our conversion rates."</p>
+                                <div class="client-info">
+                                    <img src="assets/testimonial1.webp" alt="Client 2">
+                                    <div class="client-details">
+                                        <h4>Michael Brown</h4>
+                                        <span>Marketing Director</span>
+                                        <div class="rating">
+                                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev"><i class="ri-arrow-left-s-line"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next"><i class="ri-arrow-right-s-line"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Workflow -->
+    <section class="workflow bg-alt" id="workflow">
+        <div class="container">
+            <h2 class="section-title reveal-up">My <span>Workflow</span></h2>
+            
+            <div class="workflow-grid">
+                <div class="workflow-item reveal-up" style="transition-delay: 0.1s">
+                    <div class="workflow-icon glass-card"><i class="ri-search-eye-line"></i></div>
+                    <h3>Research</h3>
+                    <p>Understanding requirements and analyzing competitors.</p>
+                </div>
+                <div class="workflow-arrow reveal-up" style="transition-delay: 0.2s"><i class="ri-arrow-right-line"></i></div>
+                <div class="workflow-item reveal-up" style="transition-delay: 0.3s">
+                    <div class="workflow-icon glass-card"><i class="ri-quill-pen-line"></i></div>
+                    <h3>Design</h3>
+                    <p>Creating wireframes and high-fidelity UI prototypes.</p>
+                </div>
+                <div class="workflow-arrow reveal-up" style="transition-delay: 0.4s"><i class="ri-arrow-right-line"></i></div>
+                <div class="workflow-item reveal-up" style="transition-delay: 0.5s">
+                    <div class="workflow-icon glass-card"><i class="ri-code-box-line"></i></div>
+                    <h3>Develop</h3>
+                    <p>Writing clean, responsive, and semantic code.</p>
+                </div>
+                <div class="workflow-arrow reveal-up" style="transition-delay: 0.6s"><i class="ri-arrow-right-line"></i></div>
+                <div class="workflow-item reveal-up" style="transition-delay: 0.7s">
+                    <div class="workflow-icon glass-card"><i class="ri-rocket-line"></i></div>
+                    <h3>Launch</h3>
+                    <p>Testing, optimizing, and deploying the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blogs -->
+    <section class="blogs" id="blogs">
+        <div class="container">
+            <h2 class="section-title reveal-up">Latest <span>Blogs</span></h2>
+            
+            <div class="blogs-grid">
+                <div class="blog-card glass-card reveal-up" style="transition-delay: 0.1s">
+                    <div class="blog-img">
+                        <img src="assets/blog1.webp" alt="Blog 1" loading="lazy">
+                        <span class="blog-date">10 Oct 2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="blog.html">The Future of CSS: What's New in 2026?</a></h3>
+                        <p>Explore the latest CSS features that are changing how we build layouts...</p>
+                        <a href="blog.html" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card glass-card reveal-up" style="transition-delay: 0.2s">
+                    <div class="blog-img">
+                        <img src="assets/blog1.webp" alt="Blog 2" loading="lazy">
+                        <span class="blog-date">05 Oct 2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="blog.html">Mastering Glassmorphism in UI Design</a></h3>
+                        <p>A complete guide to creating stunning glassmorphism effects using CSS...</p>
+                        <a href="blog.html" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card glass-card reveal-up" style="transition-delay: 0.3s">
+                    <div class="blog-img">
+                        <img src="assets/blog1.webp" alt="Blog 3" loading="lazy">
+                        <span class="blog-date">28 Sep 2026</span>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="blog.html">Tips for a Perfect Developer Portfolio</a></h3>
+                        <p>Learn what recruiters look for in a developer's portfolio and how to stand out...</p>
+                        <a href="blog.html" class="read-more">Read More <i class="ri-arrow-right-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq bg-alt" id="faq">
+        <div class="container">
+            <h2 class="section-title reveal-up">Frequently Asked <span>Questions</span></h2>
+            
+            <div class="faq-accordion reveal-up">
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>What technologies do you use?</h3>
+                        <i class="ri-add-line"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>I primarily work with HTML5, CSS3, Vanilla JavaScript, React.js, and frameworks like Tailwind CSS and Bootstrap. I also have experience with Node.js for backend integrations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>Are you available for freelance work?</h3>
+                        <i class="ri-add-line"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes, I am always open to discussing new freelance opportunities. Feel free to contact me via the contact form with your project details.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item glass-card">
+                    <div class="faq-header">
+                        <h3>Do you also provide UI/UX design services?</h3>
+                        <i class="ri-add-line"></i>
+                    </div>
+                    <div class="faq-body">
+                        <p>Yes! I design custom user interfaces in Figma before starting development to ensure we are aligned on the visual direction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta bg-gradient" id="cta">
+        <div class="container text-center reveal-up">
+            <h2 class="cta-title">Let's Build Something <span>Amazing</span> Together</h2>
+            <p class="cta-desc">I am currently available for freelance projects. Have a project in mind? Let's discuss it!</p>
+            <div class="cta-btns">
+                <a href="contact.html" class="btn btn-primary">Hire Me Now</a>
+                <a href="projects.html" class="btn btn-outline">Explore My Work</a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="nav-logo mb-3 d-inline-block">
+                        <img src="assets/logo.webp" alt="Logo">
+                    </a>
+                    <p>Elevating digital experiences through pixel-perfect design and clean code. Ready to transform your ideas into reality.</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="freelancer.html">Freelance Services</a></li>
+                        <li><a href="blog.html">Latest Blog</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Frontend Architecture</a></li>
+                        <li><a href="#">Single Page Apps</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col contact-col">
+                    <h4>Contact</h4>
+                    <p class="mb-3">Get in Touch</p>
+                    <ul class="footer-contact">
+                        <li><i class="ri-map-pin-line"></i> Salem, Tamil Nadu</li>
+                        <li><i class="ri-phone-line"></i> +91 98765 43210</li>
+                        <li><i class="ri-mail-line"></i> info@jackdawson.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jack Dawson. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to Top -->
+    <button class="back-to-top" aria-label="Back to Top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
+

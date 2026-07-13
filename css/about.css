@@ -1,0 +1,117 @@
+/* css/about.css */
+
+/* Page Banner */
+.page-banner {
+  padding: 10rem 0 5rem;
+  background-image: radial-gradient(circle at center, var(--bg-card) 0%, var(--bg-main) 100%);
+  border-bottom: 1px solid var(--border-glass);
+}
+.page-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.page-title span {
+  color: var(--primary);
+}
+.breadcrumb {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+.breadcrumb a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.breadcrumb a:hover {
+  color: var(--primary);
+}
+
+/* Detailed About */
+.about-detailed {
+  padding: 6rem 0;
+}
+.mission-vision {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.mission-vision .glass-card {
+  flex: 1;
+  padding: 1.5rem;
+}
+.mission-vision h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+
+/* Skills & Achievements */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.skills-list {
+  list-style: none;
+}
+.skills-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+}
+.skills-list i {
+  color: var(--primary);
+  font-size: 1.3rem;
+}
+.achievement-card {
+  padding: 1.5rem;
+}
+.achievement-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex; align-items: center; gap: 0.5rem;
+  color: var(--text-main);
+}
+.achievement-card i {
+  color: #F59E0B;
+}
+
+/* Certificates & Interests */
+.ci-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.cert-list {
+  display: flex; flex-direction: column; gap: 1.5rem;
+}
+.cert-item {
+  display: flex; align-items: center; gap: 1.5rem;
+  padding: 1.5rem;
+}
+.cert-item i {
+  font-size: 2.5rem; color: var(--primary);
+}
+.cert-item h4 {
+  font-size: 1.1rem; margin-bottom: 0.3rem;
+}
+.cert-item span {
+  color: var(--text-muted); font-size: 0.9rem;
+}
+
+.interest-tags {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+}
+.interest-tags span {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .mission-vision { flex-direction: column; }
+  .skills-grid, .ci-grid { grid-template-columns: 1fr; }
+  .page-title { font-size: 2.5rem; }
+}

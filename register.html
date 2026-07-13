@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Stackly Portfolio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="auth-split-page">
+        <!-- Left Panel -->
+        <div class="auth-left">
+            <div class="auth-left-content">
+                <a href="index.html" class="auth-logo">
+                    <img src="assets/logo.webp" alt="Logo">
+                </a>
+                
+                <h1 class="auth-hero-title">Join <br><span>Stackly</span></h1>
+                <p class="auth-hero-desc">Create your account to start planning premium events, connect with professional organizers, and bring your vision to life.</p>
+            </div>
+            
+            <div class="auth-testimonial">
+                <div class="stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                </div>
+                <p>"The Stackly platform made organizing our wedding incredibly easy and stress-free."</p>
+                <span class="author">- Emma & Michael, Happy Couple</span>
+            </div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="auth-right">
+            <a href="index.html" class="back-home"><i class="ri-arrow-left-line"></i> Back to Home</a>
+            
+            <div class="auth-form-container">
+                <div class="auth-form-header">
+                    <h2>Create Account</h2>
+                    <p>Join our community of event enthusiasts</p>
+                </div>
+
+                <!-- Role Selector -->
+                <div class="role-selector">
+                    <div class="role-btn active" id="role-client">
+                        <i class="ri-user-line"></i>
+                        <span>Client</span>
+                    </div>
+                    <div class="role-btn" id="role-admin">
+                        <i class="ri-star-line"></i>
+                        <span>Admin</span>
+                    </div>
+                </div>
+
+                <form id="registerForm" class="custom-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <div class="input-with-icon">
+                            <input type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-with-icon">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="password" placeholder="Password (Min. 6 characters)" required>
+                            <i class="ri-eye-line toggle-pwd" onclick="togglePwd('password', this)"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-pwd">Confirm Password</label>
+                        <div class="input-with-icon">
+                            <input type="password" id="confirm-pwd" placeholder="Confirm Password" required>
+                            <i class="ri-eye-line toggle-pwd" onclick="togglePwd('confirm-pwd', this)"></i>
+                        </div>
+                    </div>
+
+                    <div class="auth-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="terms" required>
+                            <span>I agree to the <a href="404.html" class="text-gradient">Terms & Conditions</a> and <a href="404.html" class="text-gradient">Privacy Policy</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-auth">Sign Up</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html" class="text-gradient">Log In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Role Selector logic
+        const roleClient = document.getElementById('role-client');
+        const roleAdmin = document.getElementById('role-admin');
+        
+        roleClient.addEventListener('click', () => {
+            roleClient.classList.add('active');
+            roleAdmin.classList.remove('active');
+        });
+        
+        roleAdmin.addEventListener('click', () => {
+            roleAdmin.classList.add('active');
+            roleClient.classList.remove('active');
+        });
+
+        // Toggle Password Visibility
+        function togglePwd(inputId, iconElement) {
+            const input = document.getElementById(inputId);
+            if (input.type === 'password') {
+                input.type = 'text';
+                iconElement.classList.replace('ri-eye-line', 'ri-eye-off-line');
+            } else {
+                input.type = 'password';
+                iconElement.classList.replace('ri-eye-off-line', 'ri-eye-line');
+            }
+        }
+    </script>
+    <script src="js/validation.js"></script>
+    <script src="js/animation.js"></script>
+</body>
+</html>

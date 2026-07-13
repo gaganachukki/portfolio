@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Stackly Portfolio</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/logo.webp" alt="Logo">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="freelancer.html" class="nav-link">Freelancer</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <button class="theme-toggle"><i class="ri-sun-line"></i></button>
+                <a href="login.html" class="btn btn-outline"><i class="ri-user-line"></i> Login</a>
+                <button class="menu-toggle"><i class="ri-menu-3-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container page-hero-container">
+            <div class="page-hero-content reveal-left">
+                <p class="breadcrumb"><a href="index.html"><i class="ri-home-4-line"></i> Home</a> / Contact</p>
+                <h1 class="page-hero-title">Contact <span>Me</span></h1>
+                <p class="page-hero-desc">Have a question or want to work together? I'd love to hear from you. Drop me a line and let's create something amazing.</p>
+            </div>
+            <div class="page-hero-img-box reveal-right">
+                <img src="assets/project1.webp" alt="Contact Me" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info & Form -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <!-- Contact Info -->
+                <div class="contact-info reveal-left">
+                    <h2 class="section-title text-left">Get In <span>Touch</span></h2>
+                    <p class="mb-4 text-muted">Whether you want to discuss a new project, ask a question, or just say hi, my inbox is always open.</p>
+                    
+                    <div class="info-item glass-card mb-3">
+                        <i class="ri-phone-line"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item glass-card mb-3">
+                        <i class="ri-mail-send-line"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@stackly.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item glass-card mb-3">
+                        <i class="ri-map-pin-line"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Web Dev St, Tech City, 10001</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item glass-card">
+                        <i class="ri-time-line"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper glass-card reveal-right">
+                    <form id="contactForm" class="custom-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Jack Dawson">
+                            <span class="error-msg" id="nameError">Name is required</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com">
+                            <span class="error-msg" id="emailError">Valid email is required</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Project Discussion">
+                            <span class="error-msg" id="subjectError">Subject is required</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Tell me about your project..."></textarea>
+                            <span class="error-msg" id="messageError">Message is required</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">Send Message <i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+
+            </div>
+            
+            <!-- Map Placeholder -->
+            <div class="map-wrapper glass-card reveal-up mt-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617544078862!2d-73.98784308459424!3d40.74844097932822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="nav-logo mb-3 d-inline-block">
+                        <img src="assets/logo.webp" alt="Logo">
+                    </a>
+                    <p>Elevating digital experiences through pixel-perfect design and clean code. Ready to transform your ideas into reality.</p>
+                    <div class="social-links mt-3">
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-github-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="freelancer.html">Freelance Services</a></li>
+                        <li><a href="blog.html">Latest Blog</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="404.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Terms & Conditions</a></li>
+                        <li><a href="404.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get latest updates and tips directly in your inbox.</p>
+                    <form class="newsletter-form mt-3" onsubmit="event.preventDefault(); window.location.href='404.html';">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary"><i class="ri-send-plane-fill"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Stackly Portfolio. All Rights Reserved. Designed by Jack Dawson.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top"><i class="ri-arrow-up-line"></i></button>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+</html>

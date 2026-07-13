@@ -1,0 +1,78 @@
+/* css/blog.css */
+
+.blog-page {
+  padding: 5rem 0;
+}
+.blog-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.page-link {
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.page-link:hover, .page-link.active {
+  background: var(--primary); color: #fff; border-color: var(--primary);
+}
+
+/* Sidebar */
+.sidebar-widget {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.widget-title {
+  font-size: 1.2rem; margin-bottom: 1.5rem;
+  position: relative; padding-bottom: 0.5rem;
+}
+.widget-title::after {
+  content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 2px; background: var(--primary);
+}
+
+.search-form {
+  position: relative;
+}
+.search-form input {
+  width: 100%; padding: 0.8rem 1.2rem;
+  padding-right: 3rem;
+  border-radius: 8px; border: 1px solid var(--border-glass);
+  background: var(--bg-main); color: var(--text-main); font-family: var(--font-main);
+  outline: none;
+}
+.search-form input:focus { border-color: var(--primary); }
+.search-form button {
+  position: absolute; right: 0; top: 0; height: 100%;
+  width: 3rem; background: transparent; border: none; color: var(--primary); cursor: pointer;
+}
+
+.category-list { list-style: none; }
+.category-list li { margin-bottom: 0.8rem; border-bottom: 1px dashed var(--border-glass); padding-bottom: 0.8rem; }
+.category-list li:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+.category-list a {
+  display: flex; justify-content: space-between;
+  text-decoration: none; color: var(--text-muted); transition: var(--transition);
+}
+.category-list a:hover { color: var(--primary); padding-left: 5px; }
+
+.newsletter-sidebar input {
+  width: 100%; padding: 0.8rem 1.2rem; border-radius: 8px;
+  border: 1px solid var(--border-glass); background: var(--bg-main); color: var(--text-main); outline: none;
+}
+
+@media (max-width: 1024px) {
+  .blog-layout { grid-template-columns: 1fr; }
+}

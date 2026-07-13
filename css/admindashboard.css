@@ -1,0 +1,27 @@
+/* css/admindashboard.css */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+.chart-card {
+  padding: 1.5rem;
+  display: flex; flex-direction: column;
+}
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  flex: 1;
+}
+
+.avatar-placeholder {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--gradient-btn);
+  color: #fff; display: flex; align-items: center; justify-content: center;
+  font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+  .charts-grid { grid-template-columns: 1fr; }
+}
