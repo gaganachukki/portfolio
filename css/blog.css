@@ -76,3 +76,63 @@
 @media (max-width: 1024px) {
   .blog-layout { grid-template-columns: 1fr; }
 }
+
+/* Blog Topics */
+.blog-topics { padding: 4rem 0; }
+.topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.topic-card { padding: 2rem; text-align: center; border-radius: 15px; text-decoration: none; display: flex; flex-direction: column; align-items: center; transition: var(--transition); }
+.topic-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.topic-card i { font-size: 2.5rem; color: var(--secondary); margin-bottom: 1rem; }
+.topic-card h3 { color: var(--text-main); margin-bottom: 0.5rem; font-size: 1.2rem; }
+.topic-card span { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Trending Series */
+.trending-series { padding: 4rem 0; }
+.series-card { display: flex; gap: 4rem; align-items: center; padding: 3rem; border-radius: 20px; }
+.series-content { flex: 1.5; }
+.series-image { flex: 1; border-radius: 12px; overflow: hidden; }
+.series-image img { width: 100%; height: auto; display: block; transition: var(--transition); }
+.series-image:hover img { transform: scale(1.05); }
+.badge { display: inline-block; padding: 0.5rem 1rem; background: rgba(0, 255, 170, 0.1); color: var(--primary); border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem; }
+.series-content h2 { font-size: 2.5rem; color: var(--text-main); margin-bottom: 1rem; overflow-wrap: break-word; word-break: break-word; }
+.series-content p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; }
+.series-list { list-style: none; margin-bottom: 2rem; }
+.series-list li { margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; color: var(--text-main); }
+.series-list li i { color: var(--primary); font-size: 1.2rem; }
+
+/* Newsletter */
+.newsletter { padding: 4rem 0; }
+.newsletter-box { max-width: 700px; margin: 0 auto; padding: 4rem 2rem; border-radius: 20px; }
+.newsletter-box i { font-size: 3rem; color: var(--secondary); margin-bottom: 1rem; }
+.newsletter-box h2 { font-size: 2rem; color: var(--text-main); margin-bottom: 1rem; }
+.newsletter-box p { color: var(--text-muted); margin-bottom: 2rem; }
+.newsletter-form { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1.5rem; }
+.newsletter-form input { flex: 1; max-width: 350px; padding: 1rem 1.5rem; border-radius: 8px; border: 1px solid var(--border-glass); background: rgba(255,255,255,0.05); color: var(--text-main); outline: none; }
+.newsletter-form input:focus { border-color: var(--primary); }
+.spam-notice { display: block; font-size: 0.8rem; color: var(--text-muted); }
+
+/* Meet the Author */
+.meet-author { padding: 4rem 0; }
+.author-container { display: flex; gap: 3rem; align-items: center; padding: 3rem; border-radius: 20px; }
+.author-image { width: 250px; height: 250px; border-radius: 50%; overflow: hidden; border: 4px solid var(--primary); flex-shrink: 0; animation: floatProfile 6s ease-in-out infinite; box-shadow: 0 0 20px rgba(0, 242, 254, 0.3); }
+@keyframes floatProfile {
+    0% { transform: translateY(0px); box-shadow: 0 0 20px rgba(0, 242, 254, 0.3); }
+    50% { transform: translateY(-15px); box-shadow: 0 0 40px rgba(0, 242, 254, 0.6); }
+    100% { transform: translateY(0px); box-shadow: 0 0 20px rgba(0, 242, 254, 0.3); }
+}
+.author-image img { width: 100%; height: 100%; object-fit: cover; }
+.author-bio h2 { color: var(--text-main); margin-bottom: 1.5rem; font-size: 2rem; }
+.author-bio p { color: var(--text-muted); margin-bottom: 1rem; font-size: 1.05rem; }
+.author-socials { display: flex; gap: 1rem; margin-top: 2rem; }
+.author-socials a { width: 45px; height: 45px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-glass); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-main); font-size: 1.2rem; transition: var(--transition); }
+.author-socials a:hover { background: var(--primary); color: #000; border-color: var(--primary); transform: translateY(-3px); }
+
+@media (max-width: 992px) {
+  .series-card, .author-container { flex-direction: column; text-align: center; }
+  .series-list li { justify-content: center; }
+  .author-socials { justify-content: center; }
+  .newsletter-form { flex-direction: column; align-items: center; }
+  .newsletter-form input { width: 100%; }
+}
+
+@media (max-width: 576px) { .series-content h2 { font-size: 1.8rem; } }

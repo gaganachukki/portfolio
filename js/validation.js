@@ -46,16 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.innerHTML = 'Sending... <i class="ri-loader-4-line ri-spin"></i>';
                 
                 setTimeout(() => {
-                    btn.innerHTML = 'Message Sent! <i class="ri-check-line"></i>';
-                    btn.classList.replace('btn-primary', 'btn-outline');
-                    contactForm.reset();
-                    
-                    document.querySelectorAll('.form-group').forEach(group => group.classList.remove('success'));
-                    
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.classList.replace('btn-outline', 'btn-primary');
-                    }, 3000);
+                    window.location.href = '404.html';
                 }, 1500);
             }
         });
@@ -123,10 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const activeRole = document.querySelector('.role-btn.active');
                 if(activeRole && activeRole.id === 'role-admin') {
                     localStorage.setItem('userRole', 'Admin');
-                    window.location.href = 'admindashboard.html';
+                    window.location.href = 'login.html';
                 } else {
                     localStorage.setItem('userRole', 'User');
-                    window.location.href = 'userdashboard.html';
+                    window.location.href = 'login.html';
                 }
             }
         });

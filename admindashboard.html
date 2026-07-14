@@ -138,7 +138,7 @@
                         <h3 class="mb-4">Recent Messages</h3>
                         <div class="rec-list">
                             <div class="rec-item">
-                                <div class="avatar-placeholder" style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">A</div>
+                                <img src="assets/profile.webp" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Alice">
                                 <div>
                                     <h4>Alice Johnson</h4>
                                     <p style="font-size: 0.8rem; color: var(--text-muted);">Discussing new project...</p>
@@ -146,7 +146,7 @@
                                 <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">2m ago</span>
                             </div>
                             <div class="rec-item">
-                                <div class="avatar-placeholder" style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">M</div>
+                                <img src="assets/testimonial1.webp" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Mark">
                                 <div>
                                     <h4>Michael Brown</h4>
                                     <p style="font-size: 0.8rem; color: var(--text-muted);">Website redesign...</p>
@@ -154,7 +154,7 @@
                                 <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">1h ago</span>
                             </div>
                             <div class="rec-item">
-                                <div class="avatar-placeholder" style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">S</div>
+                                <img src="assets/about.webp" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Sarah">
                                 <div>
                                     <h4>Sarah Smith</h4>
                                     <p style="font-size: 0.8rem; color: var(--text-muted);">Freelance rate...</p>
@@ -168,190 +168,297 @@
                 </div> <!-- End Dashboard Section -->
 
                 <!-- 2. PROJECTS SECTION -->
+                
                 <div id="section-projects" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>Manage <span>Projects</span></h1>
                         <p>Add, edit, or remove portfolio projects.</p>
                     </div>
-                    <div class="dashboard-grid">
-                        <div class="chart-card glass-card" style="padding:2rem;">
-                            <div style="display:flex; justify-content:space-between; align-items:center;">
-                                <h3 style="color:var(--text-main); font-size:1.1rem;">E-Commerce Platform</h3>
-                                <button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button>
-                            </div>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">Next.js & Stripe integration</p>
-                        </div>
-                        <div class="chart-card glass-card" style="padding:2rem;">
-                            <div style="display:flex; justify-content:space-between; align-items:center;">
-                                <h3 style="color:var(--text-main); font-size:1.1rem;">Banking Mobile App</h3>
-                                <button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button>
-                            </div>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">React Native UI/UX</p>
-                        </div>
-                        <div class="chart-card glass-card" style="padding:2rem;">
-                            <div style="display:flex; justify-content:space-between; align-items:center;">
-                                <h3 style="color:var(--text-main); font-size:1.1rem;">AI Chatbot Interface</h3>
-                                <button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button>
-                            </div>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">Vue.js + OpenAI API</p>
-                        </div>
+                    <div class="table-responsive" style="overflow-x: auto;">
+                        <table class="glass-card" style="width: 100%; border-collapse: collapse; text-align: left; margin-bottom: 2rem;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border-glass);">
+                                    <th style="padding: 1rem; color: var(--text-muted);">Project Name</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Tech Stack</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Status</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Generating 10 rows -->
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">E-Commerce Platform</td><td style="padding: 1rem; color: var(--text-muted);">Next.js, Stripe</td><td style="padding: 1rem;"><span style="color: #10B981;">Live</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Banking Mobile App</td><td style="padding: 1rem; color: var(--text-muted);">React Native</td><td style="padding: 1rem;"><span style="color: #F59E0B;">In Progress</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Healthcare Dashboard</td><td style="padding: 1rem; color: var(--text-muted);">Vue, Python</td><td style="padding: 1rem;"><span style="color: #10B981;">Live</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Real Estate CRM</td><td style="padding: 1rem; color: var(--text-muted);">Angular, Node</td><td style="padding: 1rem;"><span style="color: #10B981;">Live</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Social Media Tool</td><td style="padding: 1rem; color: var(--text-muted);">Svelte, Firebase</td><td style="padding: 1rem;"><span style="color: #6B7280;">Archived</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Crypto Exchange UI</td><td style="padding: 1rem; color: var(--text-muted);">React, Redux</td><td style="padding: 1rem;"><span style="color: #10B981;">Live</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">SaaS Landing Page</td><td style="padding: 1rem; color: var(--text-muted);">HTML, CSS, JS</td><td style="padding: 1rem;"><span style="color: #F59E0B;">In Progress</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Logistics Tracker</td><td style="padding: 1rem; color: var(--text-muted);">React, Mapbox</td><td style="padding: 1rem;"><span style="color: #10B981;">Live</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">AI Image Generator</td><td style="padding: 1rem; color: var(--text-muted);">Next.js, OpenAI API</td><td style="padding: 1rem;"><span style="color: #10B981;">Live</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                                <tr style="border-bottom: 1px solid var(--border-glass);"><td style="padding: 1rem;">Fitness App Backend</td><td style="padding: 1rem; color: var(--text-muted);">Express, MongoDB</td><td style="padding: 1rem;"><span style="color: #F59E0B;">In Progress</span></td><td style="padding: 1rem;"><button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button></td></tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
                 <!-- 3. BLOGS SECTION -->
+                
                 <div id="section-blogs" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>Manage <span>Blogs</span></h1>
-                        <p>Write and publish new content.</p>
+                        <p>Write and publish new articles.</p>
                     </div>
-                    <div class="dashboard-grid">
-                        <div class="chart-card glass-card" style="padding:1.5rem;">
-                            <h4 style="color:var(--primary); font-size:0.8rem; text-transform:uppercase; margin-bottom:0.5rem;">Published</h4>
-                            <h3 style="color:var(--text-main); margin-bottom:0.5rem;">10 CSS Tricks for 2026</h3>
-                            <a href="404.html" style="color:var(--text-muted); text-decoration:none; font-size:0.85rem;">Edit Article <i class="ri-edit-line"></i></a>
-                        </div>
-                        <div class="chart-card glass-card" style="padding:1.5rem;">
-                            <h4 style="color:#F59E0B; font-size:0.8rem; text-transform:uppercase; margin-bottom:0.5rem;">Draft</h4>
-                            <h3 style="color:var(--text-main); margin-bottom:0.5rem;">Why React is still king</h3>
-                            <a href="404.html" style="color:var(--text-muted); text-decoration:none; font-size:0.85rem;">Edit Article <i class="ri-edit-line"></i></a>
-                        </div>
-                        <div class="chart-card glass-card" style="padding:1.5rem;">
-                            <h4 style="color:var(--primary); font-size:0.8rem; text-transform:uppercase; margin-bottom:0.5rem;">Published</h4>
-                            <h3 style="color:var(--text-main); margin-bottom:0.5rem;">Mastering UI/UX Design</h3>
-                            <a href="404.html" style="color:var(--text-muted); text-decoration:none; font-size:0.85rem;">Edit Article <i class="ri-edit-line"></i></a>
-                        </div>
+                    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Modern CSS Frameworks</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: Jul 12, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">React Performance</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: Jun 28, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">UX Principles</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: Jun 15, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Node.js Security</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: May 30, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Web Animation</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: May 12, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Serverless Architectures</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: Apr 22, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">GraphQL vs REST</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Published: Apr 05, 2026</p><button class="btn-auth" style="padding:0.4rem;">Edit</button></div>
+                        <div class="glass-card" style="padding:1.5rem;"><h3 style="margin-bottom:0.5rem; font-size:1.1rem;">The Future of AI</h3><p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Draft</p><button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary);">Resume Edit</button></div>
                     </div>
                 </div>
 
                 <!-- 4. SERVICES SECTION -->
+                
                 <div id="section-services" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>Manage <span>Services</span></h1>
-                        <p>Update the services you offer to clients.</p>
+                        <p>Configure what you offer to clients.</p>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-card border-blue">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">Web Development</h3>
-                            <p style="color:var(--text-muted); font-size:0.85rem;">$50/hr base rate</p>
+                    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div class="glass-card" style="padding:1.5rem; border-left: 3px solid var(--primary);">
+                            <h3 style="margin-bottom:0.5rem;">Web Development</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Custom websites and web applications built from scratch.</p>
+                            <div style="display:flex; justify-content:space-between; color:var(--text-muted); font-size:0.85rem;"><span>Starting: $1000</span> <span>Active</span></div>
                         </div>
-                        <div class="stat-card border-green">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">UI/UX Design</h3>
-                            <p style="color:var(--text-muted); font-size:0.85rem;">$60/hr base rate</p>
+                        <div class="glass-card" style="padding:1.5rem; border-left: 3px solid var(--primary);">
+                            <h3 style="margin-bottom:0.5rem;">UI/UX Design</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Wireframes, prototyping, and high-fidelity mockups.</p>
+                            <div style="display:flex; justify-content:space-between; color:var(--text-muted); font-size:0.85rem;"><span>Starting: $800</span> <span>Active</span></div>
                         </div>
-                        <div class="stat-card border-purple">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">SEO Optimization</h3>
-                            <p style="color:var(--text-muted); font-size:0.85rem;">$40/hr base rate</p>
+                        <div class="glass-card" style="padding:1.5rem; border-left: 3px solid var(--primary);">
+                            <h3 style="margin-bottom:0.5rem;">SEO Optimization</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">On-page and technical SEO improvements.</p>
+                            <div style="display:flex; justify-content:space-between; color:var(--text-muted); font-size:0.85rem;"><span>Starting: $500</span> <span>Active</span></div>
+                        </div>
+                        <div class="glass-card" style="padding:1.5rem; border-left: 3px solid var(--primary);">
+                            <h3 style="margin-bottom:0.5rem;">Consultation</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">1-on-1 technical and business strategy calls.</p>
+                            <div style="display:flex; justify-content:space-between; color:var(--text-muted); font-size:0.85rem;"><span>Starting: $150/hr</span> <span>Active</span></div>
+                        </div>
+                        <div class="glass-card" style="padding:1.5rem; border-left: 3px solid #6B7280;">
+                            <h3 style="margin-bottom:0.5rem;">Mobile App Dev</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">React Native cross-platform applications.</p>
+                            <div style="display:flex; justify-content:space-between; color:var(--text-muted); font-size:0.85rem;"><span>Starting: $2000</span> <span>Paused</span></div>
+                        </div>
+                        <div class="glass-card" style="padding:1.5rem; border-left: 3px solid #6B7280;">
+                            <h3 style="margin-bottom:0.5rem;">Database Architecture</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">SQL/NoSQL database schema design and optimization.</p>
+                            <div style="display:flex; justify-content:space-between; color:var(--text-muted); font-size:0.85rem;"><span>Starting: $1200</span> <span>Paused</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 5. SKILLS SECTION -->
+                
                 <div id="section-skills" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>Manage <span>Skills</span></h1>
-                        <p>Add technical skills to your portfolio.</p>
+                        <p>Update your technical proficiencies.</p>
                     </div>
-                    <div class="stats-grid">
-                        <div class="chart-card glass-card" style="padding:1.5rem; text-align:center;">
-                            <i class="ri-reactjs-line" style="font-size:3rem; color:#61DAFB;"></i>
-                            <h3 style="color:var(--text-main); margin-top:1rem;">React.js</h3>
-                            <p style="color:var(--text-muted); font-size:0.8rem;">Expert</p>
+                    <div style="display:flex; flex-direction:column; gap:2rem; margin-bottom: 3rem;">
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Frontend Development</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">React.js (95%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Next.js (90%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Vue.js (85%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Tailwind CSS (98%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">SASS/SCSS (90%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">TypeScript (88%)</span>
+                            </div>
                         </div>
-                        <div class="chart-card glass-card" style="padding:1.5rem; text-align:center;">
-                            <i class="ri-nodejs-line" style="font-size:3rem; color:#68A063;"></i>
-                            <h3 style="color:var(--text-main); margin-top:1rem;">Node.js</h3>
-                            <p style="color:var(--text-muted); font-size:0.8rem;">Advanced</p>
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Backend Development</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Node.js (92%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Express (95%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Python/Django (80%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">PostgreSQL (85%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">MongoDB (90%)</span>
+                            </div>
                         </div>
-                        <div class="chart-card glass-card" style="padding:1.5rem; text-align:center;">
-                            <i class="ri-paint-brush-line" style="font-size:3rem; color:#F24E1E;"></i>
-                            <h3 style="color:var(--text-main); margin-top:1rem;">Figma</h3>
-                            <p style="color:var(--text-muted); font-size:0.8rem;">Intermediate</p>
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem; color: var(--primary);">DevOps & Tools</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Docker (75%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">AWS (80%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Git/GitHub (95%)</span>
+                                <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">Figma (85%)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 6. MESSAGES SECTION -->
+                
                 <div id="section-messages" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
-                        <h1>Admin <span>Inbox</span></h1>
-                        <p>Messages from visitors and clients.</p>
+                        <h1>Client <span>Messages</span></h1>
+                        <p>Inbox for contact form submissions.</p>
                     </div>
-                    <div class="chart-card glass-card" style="padding:1rem;">
-                        <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
-                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(0, 242, 254, 0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700;">J</div>
-                            <div style="flex:1;">
-                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Jack Dawson</h4>
-                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">I want to hire you for a React project...</p>
-                            </div>
-                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.4rem 0.8rem; border-radius:6px; font-weight:600; cursor:pointer;">Reply</button>
-                        </div>
-                        <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
-                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(16, 185, 129, 0.1); color:#10B981; display:flex; align-items:center; justify-content:center; font-weight:700;">E</div>
-                            <div style="flex:1;">
-                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Emma Stone</h4>
-                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Do you have experience with Stripe API?</p>
-                            </div>
-                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.4rem 0.8rem; border-radius:6px; font-weight:600; cursor:pointer;">Reply</button>
-                        </div>
-                        <div style="display:flex; gap:1rem; padding:1rem; align-items:center;">
-                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(245, 158, 11, 0.1); color:#F59E0B; display:flex; align-items:center; justify-content:center; font-weight:700;">M</div>
-                            <div style="flex:1;">
-                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Mike Ross</h4>
-                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Can you redesign our corporate website?</p>
-                            </div>
-                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.4rem 0.8rem; border-radius:6px; font-weight:600; cursor:pointer;">Reply</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. VISITORS SECTION -->
-                <div id="section-visitors" class="dashboard-section" style="display:none;">
-                    <div class="greeting-section">
-                        <h1>Recent <span>Visitors</span></h1>
-                        <p>Track who is viewing your portfolio.</p>
-                    </div>
-                    <div class="chart-card glass-card" style="padding:1.5rem;">
-                        <ul class="timeline" style="list-style:none; padding:0; margin:0; border-left:2px solid var(--border-glass); margin-left:10px;">
-                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
-                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:var(--primary);"></span>
-                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Visitor from New York, USA</p>
-                                <span style="font-size:0.8rem; color:var(--text-muted);">Viewed 'My Resume' page (5 mins ago)</span>
+                    <div class="glass-card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+                        <ul style="list-style:none; padding:0; margin:0;">
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: flex-start; cursor: pointer; transition: 0.2s;">
+                                <div style="width:50px; height:50px; border-radius:50%; flex-shrink:0; background:var(--primary); color:#000; display:flex; align-items:center; justify-content:center; font-weight:bold;">AJ</div>
+                                <div style="flex:1;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><h4 style="margin:0;">Alice Johnson</h4><span style="font-size:0.8rem; color:var(--primary);">10 mins ago</span></div>
+                                    <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">Hi there, I'm looking to get a quote for a new e-commerce website for my boutique...</p>
+                                </div>
                             </li>
-                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
-                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#10B981;"></span>
-                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Visitor from London, UK</p>
-                                <span style="font-size:0.8rem; color:var(--text-muted);">Viewed 'SaaS Landing Page' project (1 hour ago)</span>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: flex-start; cursor: pointer; transition: 0.2s;">
+                                <div style="width:50px; height:50px; border-radius:50%; flex-shrink:0; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-weight:bold;">MB</div>
+                                <div style="flex:1;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><h4 style="margin:0;">Michael Brown</h4><span style="font-size:0.8rem; color:var(--text-muted);">2 hours ago</span></div>
+                                    <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">I have a question regarding the ongoing maintenance of the React Native app you built...</p>
+                                </div>
                             </li>
-                            <li style="position:relative; padding-left:1.5rem;">
-                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#F59E0B;"></span>
-                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Visitor from Sydney, AU</p>
-                                <span style="font-size:0.8rem; color:var(--text-muted);">Submitted a contact form (2 hours ago)</span>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: flex-start; cursor: pointer; transition: 0.2s;">
+                                <div style="width:50px; height:50px; border-radius:50%; flex-shrink:0; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-weight:bold;">SS</div>
+                                <div style="flex:1;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><h4 style="margin:0;">Sarah Smith</h4><span style="font-size:0.8rem; color:var(--text-muted);">Yesterday</span></div>
+                                    <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">Can we schedule a consultation call for next Tuesday? I need advice on my AWS architecture.</p>
+                                </div>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: flex-start; cursor: pointer; transition: 0.2s;">
+                                <div style="width:50px; height:50px; border-radius:50%; flex-shrink:0; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-weight:bold;">DW</div>
+                                <div style="flex:1;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><h4 style="margin:0;">David Williams</h4><span style="font-size:0.8rem; color:var(--text-muted);">Monday</span></div>
+                                    <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">The latest push to staging looks great! Just a few minor tweaks on the homepage layout.</p>
+                                </div>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: flex-start; cursor: pointer; transition: 0.2s;">
+                                <div style="width:50px; height:50px; border-radius:50%; flex-shrink:0; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-weight:bold;">EK</div>
+                                <div style="flex:1;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><h4 style="margin:0;">Emma Knight</h4><span style="font-size:0.8rem; color:var(--text-muted);">Last Week</span></div>
+                                    <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">We loved working with you on the branding project. Sending the final invoice payment now.</p>
+                                </div>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: flex-start; cursor: pointer; transition: 0.2s;">
+                                <div style="width:50px; height:50px; border-radius:50%; flex-shrink:0; background:rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-weight:bold;">RL</div>
+                                <div style="flex:1;">
+                                    <div style="display:flex; justify-content:space-between; margin-bottom:0.3rem;"><h4 style="margin:0;">Robert Lee</h4><span style="font-size:0.8rem; color:var(--text-muted);">Last Week</span></div>
+                                    <p style="margin:0; font-size:0.9rem; color:var(--text-muted);">Are you available for freelance work next month? We have a 3-month contract open.</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- 7. VISITORS SECTION -->
+                
+                <div id="section-visitors" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Traffic & <span>Visitors</span></h1>
+                        <p>Recent visitors log.</p>
+                    </div>
+                    <div class="table-responsive" style="overflow-x: auto;">
+                        <table class="glass-card" style="width: 100%; border-collapse: collapse; text-align: left; margin-bottom: 2rem;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border-glass);">
+                                    <th style="padding: 1rem; color: var(--text-muted);">IP / Location</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Page</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Browser</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">192.168.1.1 (NY, USA)</td><td style="padding: 1rem; color: var(--text-muted);">/projects</td><td style="padding: 1rem;">Chrome (Win)</td><td style="padding: 1rem;">2 mins ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">10.0.0.5 (London, UK)</td><td style="padding: 1rem; color: var(--text-muted);">/blog/react-perf</td><td style="padding: 1rem;">Safari (iOS)</td><td style="padding: 1rem;">15 mins ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">172.16.2.4 (Berlin, DE)</td><td style="padding: 1rem; color: var(--text-muted);">/contact</td><td style="padding: 1rem;">Firefox (Mac)</td><td style="padding: 1rem;">32 mins ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">192.168.1.10 (Tokyo, JP)</td><td style="padding: 1rem; color: var(--text-muted);">/</td><td style="padding: 1rem;">Chrome (Android)</td><td style="padding: 1rem;">1 hour ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">10.0.0.12 (Sydney, AU)</td><td style="padding: 1rem; color: var(--text-muted);">/services</td><td style="padding: 1rem;">Edge (Win)</td><td style="padding: 1rem;">2 hours ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">192.168.1.5 (Toronto, CA)</td><td style="padding: 1rem; color: var(--text-muted);">/projects</td><td style="padding: 1rem;">Safari (Mac)</td><td style="padding: 1rem;">3 hours ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">172.16.2.9 (Paris, FR)</td><td style="padding: 1rem; color: var(--text-muted);">/</td><td style="padding: 1rem;">Chrome (Win)</td><td style="padding: 1rem;">4 hours ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">10.0.0.15 (Austin, TX)</td><td style="padding: 1rem; color: var(--text-muted);">/resume.pdf</td><td style="padding: 1rem;">Chrome (Mac)</td><td style="padding: 1rem;">5 hours ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">192.168.1.20 (Miami, FL)</td><td style="padding: 1rem; color: var(--text-muted);">/blog</td><td style="padding: 1rem;">Safari (iOS)</td><td style="padding: 1rem;">6 hours ago</td></tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);"><td style="padding: 1rem;">172.16.2.14 (Seattle, WA)</td><td style="padding: 1rem; color: var(--text-muted);">/contact</td><td style="padding: 1rem;">Firefox (Win)</td><td style="padding: 1rem;">7 hours ago</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <!-- 8. ANALYTICS SECTION -->
+                
                 <div id="section-analytics" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
-                        <h1>Advanced <span>Analytics</span></h1>
-                        <p>Deep dive into your traffic metrics.</p>
+                        <h1>Detailed <span>Analytics</span></h1>
+                        <p>Deep dive into your portfolio metrics.</p>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-card border-green">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">Avg Session Duration</h3>
-                            <p style="color:var(--text-muted); font-size:1.5rem; font-weight:700; margin:0.5rem 0;">03:42</p>
-                            <span class="text-green">↑ 12% vs last week</span>
+                    <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3rem;">
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">User Engagement</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">2m 45s</h2>
+                                    <p style="color: var(--text-muted);">Avg. Session Duration</p>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                                    <h2 style="font-size: 2.5rem; color: var(--primary); margin-bottom: 0.5rem;">4.2</h2>
+                                    <p style="color: var(--text-muted);">Pages per Visit</p>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px; text-align: center;">
+                                    <h2 style="font-size: 2.5rem; color: #EF4444; margin-bottom: 0.5rem;">32%</h2>
+                                    <p style="color: var(--text-muted);">Bounce Rate</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="stat-card border-blue">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">Bounce Rate</h3>
-                            <p style="color:var(--text-muted); font-size:1.5rem; font-weight:700; margin:0.5rem 0;">42.5%</p>
-                            <span class="text-green">↓ 5% vs last week</span>
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Top Performing Content</h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <span>/blog/modern-css-frameworks</span>
+                                    <span style="color: var(--text-muted);">1,245 views</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <span>/projects/ecommerce-platform</span>
+                                    <span style="color: var(--text-muted);">980 views</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <span>/services</span>
+                                    <span style="color: var(--text-muted);">850 views</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <span>/blog/react-performance</span>
+                                    <span style="color: var(--text-muted);">720 views</span>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; padding: 1rem 0;">
+                                    <span>/resume.pdf</span>
+                                    <span style="color: var(--text-muted);">430 downloads</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="stat-card border-yellow">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">Goal Conversions</h3>
-                            <p style="color:var(--text-muted); font-size:1.5rem; font-weight:700; margin:0.5rem 0;">18</p>
-                            <span class="text-green">↑ 2 from last week</span>
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Device Breakdown</h3>
+                            <div style="display: flex; justify-content: space-around; align-items: center;">
+                                <div style="text-align: center;">
+                                    <i class="ri-smartphone-line" style="font-size: 3rem; color: var(--primary);"></i>
+                                    <p style="margin-top: 0.5rem; font-weight: bold;">55%</p>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Mobile</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <i class="ri-macbook-line" style="font-size: 3rem; color: var(--primary);"></i>
+                                    <p style="margin-top: 0.5rem; font-weight: bold;">40%</p>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Desktop</p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <i class="ri-tablet-line" style="font-size: 3rem; color: var(--primary);"></i>
+                                    <p style="margin-top: 0.5rem; font-weight: bold;">5%</p>
+                                    <p style="color: var(--text-muted); font-size: 0.85rem;">Tablet</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

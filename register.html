@@ -62,7 +62,7 @@
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <div class="input-with-icon">
-                            <input type="text" id="name" placeholder="Full Name" required>
+                            <input type="text" id="name" placeholder="Full Name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" required>
                         </div>
                     </div>
 

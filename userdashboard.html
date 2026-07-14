@@ -178,76 +178,182 @@
                 </div> <!-- End Dashboard Section -->
 
                 <!-- 2. MY PROJECTS SECTION -->
+                
                 <div id="section-projects" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>My <span>Projects</span></h1>
-                        <p>Track your ongoing and completed projects.</p>
+                        <p>View the progress of your ongoing and completed projects.</p>
                     </div>
-                    <div class="dashboard-grid">
-                        <div class="chart-card glass-card" style="padding:2rem;">
-                            <h3 style="margin-bottom:1rem; color:var(--text-main);">Ongoing Web Platform</h3>
-                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">A full-stack e-commerce solution with React and Node.js.</p>
-                            <div style="width:100%; background:var(--border-glass); height:8px; border-radius:4px; overflow:hidden;">
-                                <div style="width: 75%; height:100%; background:var(--primary);"></div>
+                    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div class="glass-card" style="padding: 1.5rem; border-top: 4px solid var(--primary);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <h3 style="font-size: 1.2rem;">E-Commerce Redesign</h3>
+                                <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Active</span>
                             </div>
-                            <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.8rem; color:var(--text-muted);">
-                                <span>Progress</span>
-                                <span>75%</span>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Total overhaul of the boutique website front-end and payment gateway.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 75%; background: var(--primary); height: 100%;"></div>
                             </div>
-                        </div>
-                        <div class="chart-card glass-card" style="padding:2rem;">
-                            <h3 style="margin-bottom:1rem; color:var(--text-main);">Mobile App UI Redesign</h3>
-                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">Revamping the user experience for a fintech startup.</p>
-                            <div style="width:100%; background:var(--border-glass); height:8px; border-radius:4px; overflow:hidden;">
-                                <div style="width: 40%; height:100%; background:var(--primary);"></div>
-                            </div>
-                            <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.8rem; color:var(--text-muted);">
-                                <span>Progress</span>
-                                <span>40%</span>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Progress: 75%</span>
+                                <span>Due: Aug 15</span>
                             </div>
                         </div>
-                        <div class="chart-card glass-card" style="padding:2rem;">
-                            <h3 style="margin-bottom:1rem; color:var(--text-main);">SaaS Dashboard Template</h3>
-                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">Creating a premium dark-mode admin panel.</p>
-                            <div style="width:100%; background:var(--border-glass); height:8px; border-radius:4px; overflow:hidden;">
-                                <div style="width: 100%; height:100%; background:#10B981;"></div>
+                        
+                        <div class="glass-card" style="padding: 1.5rem; border-top: 4px solid var(--primary);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <h3 style="font-size: 1.2rem;">Mobile App Beta</h3>
+                                <span style="background: rgba(16, 185, 129, 0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Active</span>
                             </div>
-                            <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.8rem; color:var(--text-muted);">
-                                <span>Status</span>
-                                <span style="color:#10B981;">Completed</span>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">React Native application for internal team communication.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 40%; background: var(--primary); height: 100%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Progress: 40%</span>
+                                <span>Due: Sep 30</span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card" style="padding: 1.5rem; border-top: 4px solid #6B7280;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <h3 style="font-size: 1.2rem;">SEO Audit</h3>
+                                <span style="background: rgba(107, 114, 128, 0.2); color: #9CA3AF; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Comprehensive technical SEO audit and metadata updates.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 100%; background: #9CA3AF; height: 100%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Progress: 100%</span>
+                                <span>Delivered: Jun 10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card" style="padding: 1.5rem; border-top: 4px solid #6B7280;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <h3 style="font-size: 1.2rem;">Brand Identity</h3>
+                                <span style="background: rgba(107, 114, 128, 0.2); color: #9CA3AF; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Completed</span>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Logo design, color palette, and brand typography guidelines.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 100%; background: #9CA3AF; height: 100%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Progress: 100%</span>
+                                <span>Delivered: May 22</span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card" style="padding: 1.5rem; border-top: 4px solid #F59E0B;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <h3 style="font-size: 1.2rem;">Cloud Migration</h3>
+                                <span style="background: rgba(245, 158, 11, 0.2); color: #F59E0B; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Pending</span>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Moving legacy database infrastructure to AWS RDS.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 0%; background: #F59E0B; height: 100%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Progress: 0%</span>
+                                <span>Starts: Aug 01</span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card" style="padding: 1.5rem; border-top: 4px solid #F59E0B;">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                <h3 style="font-size: 1.2rem;">Custom CRM</h3>
+                                <span style="background: rgba(245, 158, 11, 0.2); color: #F59E0B; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Pending</span>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Development of an internal client management dashboard.</p>
+                            <div style="background: rgba(255,255,255,0.05); height: 8px; border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem;">
+                                <div style="width: 0%; background: #F59E0B; height: 100%;"></div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
+                                <span>Progress: 0%</span>
+                                <span>Starts: Oct 15</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 3. CONSULTATIONS SECTION -->
+                
                 <div id="section-consultations" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
-                        <h1>Scheduled <span>Consultations</span></h1>
-                        <p>Manage your upcoming meetings.</p>
+                        <h1>Your <span>Consultations</span></h1>
+                        <p>Manage your upcoming and past strategy calls.</p>
                     </div>
-                    <div class="chart-card glass-card" style="padding:2rem;">
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-glass); padding-bottom:1rem; margin-bottom:1rem;">
-                            <div>
-                                <h4 style="color:var(--text-main); margin-bottom:0.25rem;">Project Discovery Call</h4>
-                                <p style="color:var(--text-muted); font-size:0.85rem;"><i class="ri-calendar-line"></i> Tomorrow, 10:00 AM PST</p>
-                            </div>
-                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer;">Join Meet</button>
-                        </div>
-                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-glass); padding-bottom:1rem; margin-bottom:1rem;">
-                            <div>
-                                <h4 style="color:var(--text-main); margin-bottom:0.25rem;">Weekly Status Sync</h4>
-                                <p style="color:var(--text-muted); font-size:0.85rem;"><i class="ri-calendar-line"></i> Wed, 2:30 PM PST</p>
-                            </div>
-                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer;">Join Meet</button>
-                        </div>
-                        <div style="display:flex; justify-content:space-between; align-items:center;">
-                            <div>
-                                <h4 style="color:var(--text-main); margin-bottom:0.25rem;">Design Handoff Review</h4>
-                                <p style="color:var(--text-muted); font-size:0.85rem;"><i class="ri-calendar-line"></i> Fri, 11:00 AM PST</p>
-                            </div>
-                            <button style="background:transparent; color:var(--primary); border:1px solid var(--primary); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer;">Reschedule</button>
-                        </div>
+                    <div class="table-responsive" style="overflow-x: auto; margin-bottom: 2rem;">
+                        <table class="glass-card" style="width: 100%; border-collapse: collapse; text-align: left;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid var(--border-glass);">
+                                    <th style="padding: 1rem; color: var(--text-muted);">Consultation Type</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Date & Time</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Duration</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Status</th>
+                                    <th style="padding: 1rem; color: var(--text-muted);">Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Project Discovery Call</td>
+                                    <td style="padding: 1rem;">Jul 20, 2026 - 10:00 AM</td>
+                                    <td style="padding: 1rem;">45 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #3B82F6;">Upcoming</span></td>
+                                    <td style="padding: 1rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Zoom Link</a></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Architecture Review</td>
+                                    <td style="padding: 1rem;">Jul 25, 2026 - 2:30 PM</td>
+                                    <td style="padding: 1rem;">60 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #3B82F6;">Upcoming</span></td>
+                                    <td style="padding: 1rem;"><a href="#" style="color: var(--primary); text-decoration: none;">Zoom Link</a></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Technical SEO Audit</td>
+                                    <td style="padding: 1rem;">Jun 15, 2026 - 11:00 AM</td>
+                                    <td style="padding: 1rem;">30 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #10B981;">Completed</span></td>
+                                    <td style="padding: 1rem;"><span style="color: var(--text-muted);">Expired</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Initial Consultation</td>
+                                    <td style="padding: 1rem;">May 10, 2026 - 1:00 PM</td>
+                                    <td style="padding: 1rem;">30 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #10B981;">Completed</span></td>
+                                    <td style="padding: 1rem;"><span style="color: var(--text-muted);">Expired</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Design Mockup Review</td>
+                                    <td style="padding: 1rem;">Apr 22, 2026 - 4:00 PM</td>
+                                    <td style="padding: 1rem;">60 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #10B981;">Completed</span></td>
+                                    <td style="padding: 1rem;"><span style="color: var(--text-muted);">Expired</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Performance Optimization</td>
+                                    <td style="padding: 1rem;">Mar 14, 2026 - 9:00 AM</td>
+                                    <td style="padding: 1rem;">45 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #10B981;">Completed</span></td>
+                                    <td style="padding: 1rem;"><span style="color: var(--text-muted);">Expired</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Database Scaling</td>
+                                    <td style="padding: 1rem;">Feb 05, 2026 - 3:00 PM</td>
+                                    <td style="padding: 1rem;">60 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #10B981;">Completed</span></td>
+                                    <td style="padding: 1rem;"><span style="color: var(--text-muted);">Expired</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                                    <td style="padding: 1rem; font-weight: bold;">Security Briefing</td>
+                                    <td style="padding: 1rem;">Jan 20, 2026 - 10:30 AM</td>
+                                    <td style="padding: 1rem;">30 mins</td>
+                                    <td style="padding: 1rem;"><span style="color: #EF4444;">Cancelled</span></td>
+                                    <td style="padding: 1rem;"><span style="color: var(--text-muted);">Expired</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -259,24 +365,24 @@
                     </div>
                     <div class="chart-card glass-card" style="padding:1rem;">
                         <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
-                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(0, 242, 254, 0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700;">A</div>
-                            <div style="flex:1;">
+                            <img src="assets/profile.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Alice">
+                            <div style="flex:1; min-width:0;">
                                 <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Alice Johnson</h4>
                                 <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Hey, just checking in on the new wireframes...</p>
                             </div>
                             <span style="font-size:0.75rem; color:var(--text-muted);">2m ago</span>
                         </div>
                         <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
-                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(16, 185, 129, 0.1); color:#10B981; display:flex; align-items:center; justify-content:center; font-weight:700;">M</div>
-                            <div style="flex:1;">
+                            <img src="assets/testimonial1.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Mark">
+                            <div style="flex:1; min-width:0;">
                                 <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Mark Spencer</h4>
                                 <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">The latest deployment looks fantastic on mobile.</p>
                             </div>
                             <span style="font-size:0.75rem; color:var(--text-muted);">1h ago</span>
                         </div>
                         <div style="display:flex; gap:1rem; padding:1rem; align-items:center;">
-                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(245, 158, 11, 0.1); color:#F59E0B; display:flex; align-items:center; justify-content:center; font-weight:700;">S</div>
-                            <div style="flex:1;">
+                            <img src="assets/about.webp" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="Sarah">
+                            <div style="flex:1; min-width:0;">
                                 <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Sarah Connor</h4>
                                 <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Can we schedule a quick sync for tomorrow?</p>
                             </div>
@@ -286,116 +392,269 @@
                 </div>
 
                 <!-- 5. SAVED PROJECTS SECTION -->
+                
                 <div id="section-saved" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>Saved <span>Projects</span></h1>
-                        <p>Inspiration and resources you've bookmarked.</p>
+                        <p>Inspiration and bookmarked portfolio items.</p>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-card border-green">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">SaaS Landing Page</h3>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Dark theme template</p>
-                            <a href="404.html" style="color:var(--primary); text-decoration:none; font-size:0.85rem; font-weight:600;">View Details <i class="ri-arrow-right-line"></i></a>
+                    <div class="dashboard-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div class="glass-card" style="padding:0; overflow:hidden;">
+                            <div style="height:150px; background: url('assets/project1.webp') center/cover no-repeat; background-color: #222;"></div>
+                            <div style="padding:1.5rem;">
+                                <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Fintech UI Kit</h3>
+                                <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Beautiful dark mode finance dashboard.</p>
+                                <button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary); width: 100%;">View Details</button>
+                            </div>
                         </div>
-                        <div class="stat-card border-blue">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">E-commerce UI Kit</h3>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Figma components collection</p>
-                            <a href="404.html" style="color:var(--primary); text-decoration:none; font-size:0.85rem; font-weight:600;">View Details <i class="ri-arrow-right-line"></i></a>
+                        <div class="glass-card" style="padding:0; overflow:hidden;">
+                            <div style="height:150px; background: url('assets/project2.webp') center/cover no-repeat; background-color: #333;"></div>
+                            <div style="padding:1.5rem;">
+                                <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Health App Wireframes</h3>
+                                <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Minimalist fitness tracking concepts.</p>
+                                <button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary); width: 100%;">View Details</button>
+                            </div>
                         </div>
-                        <div class="stat-card border-purple">
-                            <h3 style="font-size:1.2rem; color:var(--text-main);">Portfolio React Theme</h3>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Personal branding site</p>
-                            <a href="404.html" style="color:var(--primary); text-decoration:none; font-size:0.85rem; font-weight:600;">View Details <i class="ri-arrow-right-line"></i></a>
+                        <div class="glass-card" style="padding:0; overflow:hidden;">
+                            <div style="height:150px; background: url('assets/project3.webp') center/cover no-repeat; background-color: #444;"></div>
+                            <div style="padding:1.5rem;">
+                                <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">E-Commerce Template</h3>
+                                <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">High conversion Shopify theme layout.</p>
+                                <button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary); width: 100%;">View Details</button>
+                            </div>
+                        </div>
+                        <div class="glass-card" style="padding:0; overflow:hidden;">
+                            <div style="height:150px; background: url('assets/project4.webp') center/cover no-repeat; background-color: #555;"></div>
+                            <div style="padding:1.5rem;">
+                                <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Travel Blog Layout</h3>
+                                <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Grid-based masonry photo.</p>
+                                <button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary); width: 100%;">View Details</button>
+                            </div>
+                        </div>
+                        <div class="glass-card" style="padding:0; overflow:hidden;">
+                            <div style="height:150px; background: url('assets/project5.webp') center/cover no-repeat; background-color: #666;"></div>
+                            <div style="padding:1.5rem;">
+                                <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">Crypto Dashboard</h3>
+                                <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Real-time socket powered charts.</p>
+                                <button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary); width: 100%;">View Details</button>
+                            </div>
+                        </div>
+                        <div class="glass-card" style="padding:0; overflow:hidden;">
+                            <div style="height:150px; background: url('assets/project6.webp') center/cover no-repeat; background-color: #777;"></div>
+                            <div style="padding:1.5rem;">
+                                <h3 style="margin-bottom:0.5rem; font-size:1.1rem;">SaaS Landing Page</h3>
+                                <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">High performance Next.js.</p>
+                                <button class="btn-auth" style="padding:0.4rem; background: transparent; border: 1px solid var(--primary); color: var(--primary); width: 100%;">View Details</button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 6. NOTIFICATIONS SECTION -->
+                
                 <div id="section-notifications" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
-                        <h1>Recent <span>Notifications</span></h1>
-                        <p>Stay up to date with your account activity.</p>
+                        <h1>Your <span>Notifications</span></h1>
+                        <p>Recent activity on your account.</p>
                     </div>
-                    <div class="chart-card glass-card" style="padding:1.5rem;">
-                        <ul class="timeline" style="list-style:none; padding:0; margin:0; border-left:2px solid var(--border-glass); margin-left:10px;">
-                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
-                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:var(--primary);"></span>
-                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Invoice Paid</p>
-                                <span style="font-size:0.8rem; color:var(--text-muted);">Thank you for your payment on Invoice #0012. (1 hour ago)</span>
+                    <div class="glass-card" style="padding: 0; overflow: hidden; margin-bottom: 2rem;">
+                        <ul style="list-style:none; padding:0; margin:0;">
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center;">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(16,185,129,0.1); color:#10B981; display:flex; align-items:center; justify-content:center;"><i class="ri-check-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">Payment Received</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">Invoice #1024 for SEO Audit was paid successfully.</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">2h ago</span>
                             </li>
-                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
-                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#10B981;"></span>
-                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">New Consultation Booked</p>
-                                <span style="font-size:0.8rem; color:var(--text-muted);">Alice Johnson booked a discovery call for tomorrow. (3 hours ago)</span>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center; background: rgba(0,242,254,0.05);">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(0,242,254,0.1); color:var(--primary); display:flex; align-items:center; justify-content:center;"><i class="ri-message-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">New Message</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">Alex Smith replied to your chat.</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--primary); font-weight:bold;">New</span>
                             </li>
-                            <li style="position:relative; padding-left:1.5rem;">
-                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#F59E0B;"></span>
-                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Security Alert</p>
-                                <span style="font-size:0.8rem; color:var(--text-muted);">New login from Chrome on Windows. (Yesterday)</span>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center;">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(245,158,11,0.1); color:#F59E0B; display:flex; align-items:center; justify-content:center;"><i class="ri-calendar-event-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">Upcoming Meeting</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">Project Discovery Call is scheduled for tomorrow at 10:00 AM.</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">1d ago</span>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center;">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(59,130,246,0.1); color:#3B82F6; display:flex; align-items:center; justify-content:center;"><i class="ri-file-upload-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">File Uploaded</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">'Brand_Guidelines.pdf' was uploaded to your documents.</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">2d ago</span>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center;">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(16,185,129,0.1); color:#10B981; display:flex; align-items:center; justify-content:center;"><i class="ri-flag-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">Milestone Reached</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">E-Commerce Redesign hit 75% completion.</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">3d ago</span>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center;">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(239,68,68,0.1); color:#EF4444; display:flex; align-items:center; justify-content:center;"><i class="ri-error-warning-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">Login Alert</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">New login from an unrecognized device (Mac OS, Chrome).</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">1w ago</span>
+                            </li>
+                            <li style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1.5rem; align-items: center;">
+                                <div style="width:40px; height:40px; border-radius:50%; flex-shrink:0; background:rgba(59,130,246,0.1); color:#3B82F6; display:flex; align-items:center; justify-content:center;"><i class="ri-settings-line"></i></div>
+                                <div style="flex:1; min-width:0;">
+                                    <h4 style="margin:0; font-size:1rem;">Account Created</h4>
+                                    <p style="margin:0; font-size:0.85rem; color:var(--text-muted);">Welcome to the Stackly dashboard!</p>
+                                </div>
+                                <span style="font-size:0.75rem; color:var(--text-muted);">1w ago</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- 7. SETTINGS SECTION -->
+                
                 <div id="section-settings" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
                         <h1>Account <span>Settings</span></h1>
-                        <p>Update your personal information and preferences.</p>
+                        <p>Manage your profile and preferences.</p>
                     </div>
-                    <div class="chart-card glass-card" style="padding:2rem;">
-                        <form style="display:flex; flex-direction:column; gap:1.5rem; max-width:500px;">
-                            <div>
-                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Display Name</label>
-                                <input type="text" value="Alex Smith" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                    <div style="display:flex; flex-direction:column; gap:2rem; margin-bottom: 3rem;">
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Profile Information</h3>
+                            <div class="custom-form" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                                <div class="modern-input">
+                                    <input type="text" value="Jack" required>
+                                    <label>First Name</label>
+                                </div>
+                                <div class="modern-input">
+                                    <input type="text" value="Dawson" required>
+                                    <label>Last Name</label>
+                                </div>
+                                <div class="modern-input" style="grid-column: 1 / -1;">
+                                    <input type="email" value="jack.dawson@example.com" required>
+                                    <label>Email Address</label>
+                                </div>
+                                <div class="modern-input" style="grid-column: 1 / -1;">
+                                    <textarea required>CEO at TechVentures Inc.</textarea>
+                                    <label>Bio / Company</label>
+                                </div>
+                                <div style="grid-column: 1 / -1;">
+                                    <button class="btn-auth btn-animated" style="width: auto; padding: 0.8rem 2rem;" onclick="document.querySelector('[data-target=\'section-dashboard\']').click()">Save Changes</button>
+                                </div>
                             </div>
-                            <div>
-                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Email Address</label>
-                                <input type="email" value="alex@example.com" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                        </div>
+                        
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Security</h3>
+                            <div class="custom-form" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                                <div class="modern-input">
+                                    <input type="password" required>
+                                    <label>Current Password</label>
+                                </div>
+                                <div class="modern-input">
+                                    <input type="password" required>
+                                    <label>New Password</label>
+                                </div>
+                                <div>
+                                    <button class="btn-auth btn-animated" style="width: auto; padding: 0.8rem 2rem;" onclick="document.querySelector('[data-target=\'section-dashboard\']').click()">Update Password</button>
+                                </div>
                             </div>
-                            <div>
-                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">New Password</label>
-                                <input type="password" placeholder="Enter new password" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                        </div>
+
+                        <div class="glass-card" style="padding: 2rem;">
+                            <h3 style="margin-bottom: 1.5rem;">Email Preferences</h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <label style="display: flex; align-items: center; gap: 1rem; cursor: pointer;">
+                                    <input type="checkbox" checked style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                    <span>Receive project update notifications</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 1rem; cursor: pointer;">
+                                    <input type="checkbox" checked style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                    <span>Receive consultation reminders</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 1rem; cursor: pointer;">
+                                    <input type="checkbox" style="accent-color: var(--primary); width: 18px; height: 18px;">
+                                    <span>Receive marketing newsletters</span>
+                                </label>
                             </div>
-                            <div>
-                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Email Notifications</label>
-                                <select style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
-                                    <option value="all">All Notifications</option>
-                                    <option value="important">Important Only</option>
-                                    <option value="none">None</option>
-                                </select>
-                            </div>
-                            <button type="button" style="background:var(--primary); color:var(--bg-main); border:none; padding:0.8rem; border-radius:8px; font-weight:700; font-size:1rem; cursor:pointer; font-family:'Inter', sans-serif; margin-top:0.5rem;">Save Changes</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
                 <!-- 8. RESUME SECTION -->
+                
                 <div id="section-resume" class="dashboard-section" style="display:none;">
                     <div class="greeting-section">
-                        <h1>My <span>Resume</span></h1>
-                        <p>View or download your professional resume.</p>
+                        <h1>Professional <span>Resume</span></h1>
+                        <p>View the full interactive resume.</p>
                     </div>
-                    <div class="chart-card glass-card" style="padding:2rem;">
-                        <div style="display:flex; align-items:center; gap:2rem; margin-bottom:2rem;">
-                            <div style="width:80px; height:80px; border-radius:16px; background:rgba(0, 242, 254, 0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:2.5rem;">
-                                <i class="ri-file-text-line"></i>
-                            </div>
+                    <div class="glass-card" style="padding: 2rem; margin-bottom: 3rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1.5rem; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
                             <div>
-                                <h3 style="color:var(--text-main); margin-bottom:0.25rem;">Alex Smith - Full Stack Developer</h3>
-                                <p style="color:var(--text-muted); margin-bottom:1rem;">Updated: July 2026 • PDF Format • 1.2 MB</p>
-                                <div style="display:flex; gap:1rem;">
-                                    <a href="assets/resume.pdf" target="_blank" style="background:var(--bg-main); border:1px solid var(--border-glass); color:var(--text-main); padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:600;"><i class="ri-eye-line"></i> Preview</a>
-                                    <a href="assets/resume.pdf" download style="background:var(--primary); color:var(--bg-main); padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:700;"><i class="ri-download-line"></i> Download PDF</a>
-                                </div>
+                                <h2 style="color:var(--text-main); margin-bottom:0.25rem;">Alex Smith</h2>
+                                <h3 style="color:var(--primary); margin-bottom:0.25rem;">Full Stack Developer</h3>
+                                <p style="color:var(--text-muted);">Updated: July 2026 • PDF Format • 1.2 MB</p>
+                            </div>
+                            <div style="display:flex; gap:1rem;">
+                                <a href="404.html" style="background:var(--bg-main); border:1px solid var(--border-glass); color:var(--text-main); padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:600;"><i class="ri-eye-line"></i> Preview</a>
+                                <a href="404.html" style="background:var(--primary); color:var(--bg-main); padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:700;"><i class="ri-download-line"></i> Download PDF</a>
                             </div>
                         </div>
-                        <h4 style="color:var(--text-main); margin-bottom:1rem; border-bottom:1px solid var(--border-glass); padding-bottom:0.5rem;">Resume Highlights</h4>
-                        <ul style="color:var(--text-muted); padding-left:1.5rem; line-height:1.8;">
-                            <li>5+ years of experience in building scalable web applications.</li>
-                            <li>Expertise in React, Node.js, and modern CSS frameworks.</li>
-                            <li>Proven track record of improving application performance by 40%.</li>
-                        </ul>
+
+                        <h4 style="color:var(--primary); margin-bottom:1rem; font-size:1.2rem;">Professional Summary</h4>
+                        <p style="color:var(--text-muted); line-height:1.8; margin-bottom: 2.5rem;">Results-driven Full Stack Developer with over 5 years of experience building scalable web applications. Expertise in React, Node.js, and modern CSS frameworks. Proven track record of improving application performance by 40% and leading cross-functional teams to deliver enterprise software solutions on time.</p>
+
+                        <h4 style="color:var(--primary); margin-bottom:1.5rem; font-size:1.2rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">Experience</h4>
+                        <div style="margin-bottom: 2rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5rem; position: relative;">
+                            <div style="position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; background: var(--primary);"></div>
+                            <h3 style="font-size:1.1rem; margin-bottom:0.2rem;">Senior Frontend Engineer</h3>
+                            <p style="color:var(--primary); font-size:0.9rem; margin-bottom:1rem;">TechCorp Inc. | 2023 - Present</p>
+                            <ul style="color:var(--text-muted); padding-left:1.5rem; line-height:1.8; margin-bottom: 0;">
+                                <li>Led the migration of a legacy Angular monolith to a modern Next.js micro-frontend architecture.</li>
+                                <li>Improved Lighthouse performance scores from 45 to 98 across all core product pages.</li>
+                                <li>Mentored 4 junior developers and established team-wide CI/CD best practices.</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 2rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5rem; position: relative;">
+                            <div style="position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; background: rgba(255,255,255,0.3);"></div>
+                            <h3 style="font-size:1.1rem; margin-bottom:0.2rem;">Full Stack Developer</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">Creative Agency | 2020 - 2023</p>
+                            <ul style="color:var(--text-muted); padding-left:1.5rem; line-height:1.8; margin-bottom: 0;">
+                                <li>Developed and deployed 15+ custom WordPress and React-based e-commerce solutions.</li>
+                                <li>Integrated secure Stripe and PayPal payment gateways processing $1M+ annually.</li>
+                                <li>Designed RESTful APIs using Express.js and MongoDB.</li>
+                            </ul>
+                        </div>
+                        <div style="margin-bottom: 2.5rem; border-left: 2px solid rgba(255,255,255,0.1); padding-left: 1.5rem; position: relative;">
+                            <div style="position: absolute; left: -7px; top: 5px; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; background: rgba(255,255,255,0.3);"></div>
+                            <h3 style="font-size:1.1rem; margin-bottom:0.2rem;">Junior Web Developer</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem;">StartUp Hub | 2018 - 2020</p>
+                            <ul style="color:var(--text-muted); padding-left:1.5rem; line-height:1.8; margin-bottom: 0;">
+                                <li>Assisted in building responsive UI components using Bootstrap and jQuery.</li>
+                                <li>Managed database migrations and routine server maintenance tasks.</li>
+                            </ul>
+                        </div>
+
+                        <h4 style="color:var(--primary); margin-bottom:1.5rem; font-size:1.2rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">Education</h4>
+                        <div style="margin-bottom: 2.5rem;">
+                            <h3 style="font-size:1.1rem; margin-bottom:0.2rem;">B.S. in Computer Science</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem;">University of Technology | 2014 - 2018</p>
+                        </div>
+                        
+                        <h4 style="color:var(--primary); margin-bottom:1.5rem; font-size:1.2rem; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem;">Certifications</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">AWS Certified Developer</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">React Native Specialist</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">Google Analytics Individual Qualification</span>
+                        </div>
                     </div>
                 </div>
 
@@ -407,4 +666,5 @@
     <script src="js/dashboard.js"></script>
 </body>
 </html>
+
 

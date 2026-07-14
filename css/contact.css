@@ -34,9 +34,12 @@
 .form-group.error input, .form-group.error textarea { border-color: #EF4444; }
 .form-group.success input, .form-group.success textarea { border-color: #10B981; }
 
-.map-wrapper { padding: 1rem; }
-.map-wrapper iframe { border-radius: 12px; filter: grayscale(100%) invert(90%) contrast(80%); }
-[data-theme="light"] .map-wrapper iframe { filter: none; }
+.map-wrapper { padding: 1rem; animation: floatMap 6s ease-in-out infinite; }
+@keyframes floatMap {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.map-wrapper iframe { border-radius: 12px; }
 
 .w-100 { width: 100%; }
 

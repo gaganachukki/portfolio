@@ -44,6 +44,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -271,15 +272,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 .footer {
   background: var(--bg-card);
-  padding: 4rem 0 2rem;
+  padding: 2.5rem 0 1.5rem;
   border-top: 1px solid var(--border-glass);
 }
 
 .footer-top {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
-  margin-bottom: 3rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-col h4 {
@@ -290,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-col p {
   color: var(--text-muted);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer-links {
@@ -298,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-links li {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-links a {
@@ -342,9 +343,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   border-top: 1px solid var(--border-glass);
   color: var(--text-muted);
+  font-size: 0.85rem;
 }
 
 .footer-bottom-links a {
@@ -364,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-muted);
 }
 .footer-contact i {
@@ -543,14 +545,15 @@ h1, h2, h3, h4, h5, h6 {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
+    width: 100vw;
     height: 100vh;
     background: var(--bg-card);
     flex-direction: column;
-    padding: 6rem 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
     transition: 0.4s ease;
     z-index: 999;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
   }
 
   .nav-menu.active {
@@ -578,7 +581,22 @@ h1, h2, h3, h4, h5, h6 {
   html {
     font-size: 14px;
   }
+  /* Fix nav overlap on very small screens */
+  .nav-right .btn {
+    font-size: 0;
+    padding: 0.5rem 0.8rem;
+  }
+  .nav-right .btn i {
+    font-size: 1.2rem;
+    margin: 0;
+  }
 }
 
 .nav-logo img { height: 35px; width: auto; object-fit: contain; }
 
+
+.menu-toggle:focus, .menu-toggle:active { outline: none; border: none; }
+
+
+/* Table Responsiveness Fix */
+.table-responsive th, .table-responsive td { white-space: nowrap; }

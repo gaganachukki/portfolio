@@ -143,12 +143,103 @@
                     <div class="sidebar-widget glass-card">
                         <h4 class="widget-title">Newsletter</h4>
                         <p class="mb-3" style="font-size:0.9rem; color:var(--text-muted);">Subscribe to get latest articles directly in your inbox.</p>
-                        <form class="newsletter-sidebar" onsubmit="event.preventDefault();">
+                        <form class="newsletter-sidebar" style="display: flex; flex-direction: column; gap: 0.8rem;" action="404.html">
                             <input type="email" placeholder="Email address" required>
                             <button type="submit" class="btn btn-primary w-100 mt-2">Subscribe</button>
                         </form>
                     </div>
                 </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics & Categories -->
+    <section class="blog-topics bg-alt" id="blog-topics">
+        <div class="container text-center">
+            <div class="section-header reveal-up">
+                <h2 class="section-title">Explore by <span>Topic</span></h2>
+                <p class="section-subtitle">Find exactly what you're looking for.</p>
+            </div>
+            <div class="topics-grid reveal-up">
+                <a href="404.html" class="topic-card glass-card">
+                    <i class="ri-code-s-slash-line"></i>
+                    <h3>Frontend Dev</h3>
+                    <span>24 Articles</span>
+                </a>
+                <a href="404.html" class="topic-card glass-card">
+                    <i class="ri-brush-line"></i>
+                    <h3>UI/UX Design</h3>
+                    <span>18 Articles</span>
+                </a>
+                <a href="404.html" class="topic-card glass-card">
+                    <i class="ri-rocket-line"></i>
+                    <h3>Career Advice</h3>
+                    <span>12 Articles</span>
+                </a>
+                <a href="404.html" class="topic-card glass-card">
+                    <i class="ri-css3-line"></i>
+                    <h3>CSS Tricks</h3>
+                    <span>30 Articles</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Series -->
+    <section class="trending-series" id="trending-series">
+        <div class="container">
+            <div class="series-card glass-card reveal-up">
+                <div class="series-content">
+                    <span class="badge">Featured Series</span>
+                    <h2>Mastering Glassmorphism</h2>
+                    <p>A comprehensive 5-part guide to building stunning, modern, glass-like UI components using vanilla CSS and minimal HTML.</p>
+                    <ul class="series-list">
+                        <li><i class="ri-checkbox-circle-fill"></i> Part 1: The Basics of Backdrop Filter</li>
+                        <li><i class="ri-checkbox-circle-fill"></i> Part 2: Handling Borders and Light</li>
+                        <li><i class="ri-time-line"></i> Part 3: Accessibility Concerns</li>
+                    </ul>
+                    <a href="404.html" class="btn btn-primary mt-3">Start Reading Series</a>
+                </div>
+                <div class="series-image">
+                    <img src="assets/blog-hero.webp" alt="Glassmorphism Series" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter bg-alt" id="newsletter">
+        <div class="container text-center reveal-up">
+            <div class="newsletter-box glass-card">
+                <i class="ri-mail-send-line"></i>
+                <h2>Join the Developer Insider</h2>
+                <p>Get exclusive web development tips, UI resources, and early access to my tutorials straight to your inbox.</p>
+                <form class="newsletter-form" action="404.html">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <span class="spam-notice">No spam. Unsubscribe at any time.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Author -->
+    <section class="meet-author" id="meet-author">
+        <div class="container">
+            <div class="author-container glass-card reveal-up">
+                <div class="author-image">
+                    <img src="assets/ai5.webp" alt="Jack Dawson" loading="lazy">
+                </div>
+                <div class="author-bio">
+                    <h2>Hi, I'm Jack Dawson</h2>
+                    <p>I started this blog to share my journey as a self-taught frontend developer. My goal is to break down complex UI engineering concepts into simple, actionable tutorials that anyone can follow.</p>
+                    <p>When I'm not writing code or articles, you can find me exploring typography, tweaking CSS variables, or sipping too much coffee.</p>
+                    <div class="author-socials">
+                        <a href="404.html"><i class="ri-twitter-x-line"></i></a>
+                        <a href="404.html"><i class="ri-github-fill"></i></a>
+                        <a href="404.html"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -67,27 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Active link highlighting
-    const sections = document.querySelectorAll('section[id]');
-    
-    window.addEventListener('scroll', () => {
-        const scrollY = window.pageYOffset;
-        
-        sections.forEach(current => {
-            const sectionHeight = current.offsetHeight;
-            const sectionTop = current.offsetTop - 100;
-            const sectionId = current.getAttribute('id');
-            const navLink = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
-            
-            if(navLink) {
-                if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLink.classList.add('active');
-                } else {
-                    navLink.classList.remove('active');
-                }
-            }
-        });
-    });
 
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
