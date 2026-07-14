@@ -22,23 +22,28 @@
                 </a>
                 <button class="close-sidebar d-md-none"><i class="ri-close-line"></i></button>
             </div>
-            
-            <div class="user-info text-center mt-4 mb-4">
-                <img src="assets/hero.webp" alt="Admin Profile" class="dashboard-avatar">
-                <h4>Jack Dawson</h4>
-                <p class="text-muted text-sm">Super Admin</p>
+
+            <div class="sidebar-profile-card" id="sidebarProfileCard">
+                <div class="profile-avatar" id="sidebarAvatar">A</div>
+                <div class="profile-info">
+                    <h4 id="sidebarName">Admin</h4>
+                    <p id="sidebarEmail">admin@stackly.com</p>
+                    <span class="profile-badge" id="sidebarBadge">ADMIN PANEL</span>
+                </div>
             </div>
 
             <ul class="sidebar-menu">
-                <li><a href="admindashboard.html" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
-                <li><a href="#"><i class="ri-briefcase-4-line"></i> Projects</a></li>
-                <li><a href="#"><i class="ri-article-line"></i> Blogs</a></li>
-                <li><a href="#"><i class="ri-service-line"></i> Services</a></li>
-                <li><a href="#"><i class="ri-tools-fill"></i> Skills</a></li>
-                <li><a href="#"><i class="ri-message-2-line"></i> Messages</a></li>
-                <li><a href="#"><i class="ri-team-line"></i> Visitors</a></li>
-                <li><a href="#"><i class="ri-bar-chart-box-line"></i> Analytics</a></li>
-                <li><a href="#"><i class="ri-settings-4-line"></i> Settings</a></li>
+                <li class="sidebar-category">MAIN</li>
+                <li><a href="#" data-target="section-dashboard" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
+                <li><a href="#" data-target="section-projects"><i class="ri-briefcase-4-line"></i> Projects</a></li>
+                <li><a href="#" data-target="section-blogs"><i class="ri-article-line"></i> Blogs</a></li>
+                <li><a href="#" data-target="section-services"><i class="ri-service-line"></i> Services</a></li>
+                <li><a href="#" data-target="section-skills"><i class="ri-tools-fill"></i> Skills</a></li>
+                <li class="sidebar-category">RESOURCES</li>
+                <li><a href="#" data-target="section-messages"><i class="ri-message-2-line"></i> Messages</a></li>
+                <li><a href="#" data-target="section-visitors"><i class="ri-team-line"></i> Visitors</a></li>
+                <li><a href="#" data-target="section-analytics"><i class="ri-bar-chart-box-line"></i> Analytics</a></li>
+                <li><a href="#" data-target="section-settings"><i class="ri-settings-4-line"></i> Settings</a></li>
             </ul>
 
             <div class="sidebar-footer">
@@ -49,14 +54,22 @@
         <!-- Main Content -->
         <main class="dashboard-main">
             <!-- Top Navbar -->
-            <header class="dashboard-nav glass-card">
+            <header class="dashboard-nav">
                 <div class="nav-left">
                     <button class="open-sidebar d-md-none"><i class="ri-menu-line"></i></button>
-                    <h2>Admin Overview</h2>
+                    <h2>Admin Portal</h2>
+                    <div class="mobile-logo"><img src="assets/logo.webp" alt="Stackly Logo" style="height: 28px;"></div>
                 </div>
                 <div class="nav-right">
+                    <div class="nav-actions">
+                        <button class="notification-btn">
+                            <i class="ri-notification-line"></i>
+                            <span class="notification-badge">5</span>
+                        </button>
+                    </div>
                     <div class="nav-profile">
-                        <img src="assets/hero.webp" alt="Profile">
+                        <div class="profile-avatar" id="navAvatarCircle" style="width: 35px; height: 35px; font-size: 1.2rem;">G</div>
+                        <span id="navProfileName">Jack Dawson</span>
                     </div>
                 </div>
             </header>
@@ -64,86 +77,87 @@
             <!-- Dashboard Content -->
             <div class="dashboard-content">
                 
-                <div class="stats-grid mb-4">
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-eye-line"></i></div>
-                        <div class="stat-details">
-                            <h3>14.2k</h3>
-                            <p>Total Visitors</p>
+                <!-- 1. DASHBOARD SECTION -->
+                <div id="section-dashboard" class="dashboard-section active">
+                <!-- Greeting -->
+                <div class="greeting-section">
+                    <h1>Admin <span id="greetingName">Overview</span></h1>
+                    <p>Here's what's happening with your system today.</p>
+                </div>
+                
+                <div class="charts-grid mb-4" style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                    <div class="chart-card glass-card" style="padding: 1.5rem;">
+                        <h3 class="mb-3">Visitor Statistics (Line Chart)</h3>
+                        <div class="chart-container" style="position: relative; height:250px;">
+                            <canvas id="lineChart"></canvas>
                         </div>
                     </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-folder-add-line"></i></div>
-                        <div class="stat-details">
-                            <h3>32</h3>
-                            <p>Projects Added</p>
-                        </div>
-                    </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-mail-unread-line"></i></div>
-                        <div class="stat-details">
-                            <h3>128</h3>
-                            <p>New Messages</p>
-                        </div>
-                    </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-article-line"></i></div>
-                        <div class="stat-details">
-                            <h3>45</h3>
-                            <p>Total Blogs</p>
+                    <div class="chart-card glass-card" style="padding: 1.5rem;">
+                        <h3 class="mb-3">Traffic Sources (Pie Chart)</h3>
+                        <div class="chart-container" style="position: relative; height:250px;">
+                            <canvas id="pieChart"></canvas>
                         </div>
                     </div>
                 </div>
 
-                <div class="charts-grid mb-4">
-                    <div class="chart-card glass-card">
-                        <h3 class="mb-3">Visitor Statistics (Line Chart)</h3>
-                        <div class="chart-container">
-                            <canvas id="lineChart"></canvas>
+                <div class="stats-grid mb-4">
+                    <div class="stat-card border-blue">
+                        <div class="stat-details">
+                            <h3>14.2k</h3>
+                            <p>Total Visitors</p>
+                            <span class="text-green">↑ 12.5% this month</span>
                         </div>
                     </div>
-                    <div class="chart-card glass-card">
-                        <h3 class="mb-3">Traffic Sources (Pie Chart)</h3>
-                        <div class="chart-container">
-                            <canvas id="pieChart"></canvas>
+                    <div class="stat-card border-green">
+                        <div class="stat-details">
+                            <h3>32</h3>
+                            <p>Projects Added</p>
+                            <span class="text-green">↑ 3 new this week</span>
+                        </div>
+                    </div>
+                    <div class="stat-card border-yellow">
+                        <div class="stat-details">
+                            <h3>128</h3>
+                            <p>New Messages</p>
+                            <span class="text-green">↑ 15 from yesterday</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="dashboard-grid">
                     <!-- Bar Chart -->
-                    <div class="chart-card glass-card">
+                    <div class="chart-card glass-card" style="padding: 1.5rem;">
                         <h3 class="mb-3">Weekly Traffic (Bar Graph)</h3>
-                        <div class="chart-container">
+                        <div class="chart-container" style="position: relative; height:250px;">
                             <canvas id="barChart"></canvas>
                         </div>
                     </div>
 
                     <!-- Recent Messages -->
-                    <div class="glass-card">
+                    <div class="glass-card" style="padding: 1.5rem;">
                         <h3 class="mb-4">Recent Messages</h3>
                         <div class="rec-list">
                             <div class="rec-item">
-                                <div class="avatar-placeholder">A</div>
+                                <div class="avatar-placeholder" style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">A</div>
                                 <div>
                                     <h4>Alice Johnson</h4>
-                                    <p>Discussing new project...</p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">Discussing new project...</p>
                                 </div>
                                 <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">2m ago</span>
                             </div>
                             <div class="rec-item">
-                                <div class="avatar-placeholder">M</div>
+                                <div class="avatar-placeholder" style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">M</div>
                                 <div>
                                     <h4>Michael Brown</h4>
-                                    <p>Website redesign inquiry...</p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">Website redesign...</p>
                                 </div>
                                 <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">1h ago</span>
                             </div>
                             <div class="rec-item">
-                                <div class="avatar-placeholder">S</div>
+                                <div class="avatar-placeholder" style="width: 50px; height: 50px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem;">S</div>
                                 <div>
                                     <h4>Sarah Smith</h4>
-                                    <p>Freelance rate question...</p>
+                                    <p style="font-size: 0.8rem; color: var(--text-muted);">Freelance rate...</p>
                                 </div>
                                 <span class="text-muted" style="font-size:0.8rem; margin-left:auto;">3h ago</span>
                             </div>
@@ -151,11 +165,231 @@
                     </div>
                 </div>
 
-            </div>
+                </div> <!-- End Dashboard Section -->
+
+                <!-- 2. PROJECTS SECTION -->
+                <div id="section-projects" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Manage <span>Projects</span></h1>
+                        <p>Add, edit, or remove portfolio projects.</p>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="chart-card glass-card" style="padding:2rem;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <h3 style="color:var(--text-main); font-size:1.1rem;">E-Commerce Platform</h3>
+                                <button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">Next.js & Stripe integration</p>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:2rem;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <h3 style="color:var(--text-main); font-size:1.1rem;">Banking Mobile App</h3>
+                                <button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">React Native UI/UX</p>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:2rem;">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <h3 style="color:var(--text-main); font-size:1.1rem;">AI Chatbot Interface</h3>
+                                <button style="background:transparent; border:1px solid #EF4444; color:#EF4444; border-radius:4px; padding:0.2rem 0.6rem; cursor:pointer;">Delete</button>
+                            </div>
+                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem;">Vue.js + OpenAI API</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. BLOGS SECTION -->
+                <div id="section-blogs" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Manage <span>Blogs</span></h1>
+                        <p>Write and publish new content.</p>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="chart-card glass-card" style="padding:1.5rem;">
+                            <h4 style="color:var(--primary); font-size:0.8rem; text-transform:uppercase; margin-bottom:0.5rem;">Published</h4>
+                            <h3 style="color:var(--text-main); margin-bottom:0.5rem;">10 CSS Tricks for 2026</h3>
+                            <a href="404.html" style="color:var(--text-muted); text-decoration:none; font-size:0.85rem;">Edit Article <i class="ri-edit-line"></i></a>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:1.5rem;">
+                            <h4 style="color:#F59E0B; font-size:0.8rem; text-transform:uppercase; margin-bottom:0.5rem;">Draft</h4>
+                            <h3 style="color:var(--text-main); margin-bottom:0.5rem;">Why React is still king</h3>
+                            <a href="404.html" style="color:var(--text-muted); text-decoration:none; font-size:0.85rem;">Edit Article <i class="ri-edit-line"></i></a>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:1.5rem;">
+                            <h4 style="color:var(--primary); font-size:0.8rem; text-transform:uppercase; margin-bottom:0.5rem;">Published</h4>
+                            <h3 style="color:var(--text-main); margin-bottom:0.5rem;">Mastering UI/UX Design</h3>
+                            <a href="404.html" style="color:var(--text-muted); text-decoration:none; font-size:0.85rem;">Edit Article <i class="ri-edit-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. SERVICES SECTION -->
+                <div id="section-services" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Manage <span>Services</span></h1>
+                        <p>Update the services you offer to clients.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card border-blue">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">Web Development</h3>
+                            <p style="color:var(--text-muted); font-size:0.85rem;">$50/hr base rate</p>
+                        </div>
+                        <div class="stat-card border-green">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">UI/UX Design</h3>
+                            <p style="color:var(--text-muted); font-size:0.85rem;">$60/hr base rate</p>
+                        </div>
+                        <div class="stat-card border-purple">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">SEO Optimization</h3>
+                            <p style="color:var(--text-muted); font-size:0.85rem;">$40/hr base rate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. SKILLS SECTION -->
+                <div id="section-skills" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Manage <span>Skills</span></h1>
+                        <p>Add technical skills to your portfolio.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="chart-card glass-card" style="padding:1.5rem; text-align:center;">
+                            <i class="ri-reactjs-line" style="font-size:3rem; color:#61DAFB;"></i>
+                            <h3 style="color:var(--text-main); margin-top:1rem;">React.js</h3>
+                            <p style="color:var(--text-muted); font-size:0.8rem;">Expert</p>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:1.5rem; text-align:center;">
+                            <i class="ri-nodejs-line" style="font-size:3rem; color:#68A063;"></i>
+                            <h3 style="color:var(--text-main); margin-top:1rem;">Node.js</h3>
+                            <p style="color:var(--text-muted); font-size:0.8rem;">Advanced</p>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:1.5rem; text-align:center;">
+                            <i class="ri-paint-brush-line" style="font-size:3rem; color:#F24E1E;"></i>
+                            <h3 style="color:var(--text-main); margin-top:1rem;">Figma</h3>
+                            <p style="color:var(--text-muted); font-size:0.8rem;">Intermediate</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. MESSAGES SECTION -->
+                <div id="section-messages" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Admin <span>Inbox</span></h1>
+                        <p>Messages from visitors and clients.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:1rem;">
+                        <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
+                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(0, 242, 254, 0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700;">J</div>
+                            <div style="flex:1;">
+                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Jack Dawson</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">I want to hire you for a React project...</p>
+                            </div>
+                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.4rem 0.8rem; border-radius:6px; font-weight:600; cursor:pointer;">Reply</button>
+                        </div>
+                        <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
+                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(16, 185, 129, 0.1); color:#10B981; display:flex; align-items:center; justify-content:center; font-weight:700;">E</div>
+                            <div style="flex:1;">
+                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Emma Stone</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Do you have experience with Stripe API?</p>
+                            </div>
+                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.4rem 0.8rem; border-radius:6px; font-weight:600; cursor:pointer;">Reply</button>
+                        </div>
+                        <div style="display:flex; gap:1rem; padding:1rem; align-items:center;">
+                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(245, 158, 11, 0.1); color:#F59E0B; display:flex; align-items:center; justify-content:center; font-weight:700;">M</div>
+                            <div style="flex:1;">
+                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Mike Ross</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Can you redesign our corporate website?</p>
+                            </div>
+                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.4rem 0.8rem; border-radius:6px; font-weight:600; cursor:pointer;">Reply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. VISITORS SECTION -->
+                <div id="section-visitors" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Recent <span>Visitors</span></h1>
+                        <p>Track who is viewing your portfolio.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:1.5rem;">
+                        <ul class="timeline" style="list-style:none; padding:0; margin:0; border-left:2px solid var(--border-glass); margin-left:10px;">
+                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
+                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:var(--primary);"></span>
+                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Visitor from New York, USA</p>
+                                <span style="font-size:0.8rem; color:var(--text-muted);">Viewed 'My Resume' page (5 mins ago)</span>
+                            </li>
+                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
+                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#10B981;"></span>
+                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Visitor from London, UK</p>
+                                <span style="font-size:0.8rem; color:var(--text-muted);">Viewed 'SaaS Landing Page' project (1 hour ago)</span>
+                            </li>
+                            <li style="position:relative; padding-left:1.5rem;">
+                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#F59E0B;"></span>
+                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Visitor from Sydney, AU</p>
+                                <span style="font-size:0.8rem; color:var(--text-muted);">Submitted a contact form (2 hours ago)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 8. ANALYTICS SECTION -->
+                <div id="section-analytics" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Advanced <span>Analytics</span></h1>
+                        <p>Deep dive into your traffic metrics.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card border-green">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">Avg Session Duration</h3>
+                            <p style="color:var(--text-muted); font-size:1.5rem; font-weight:700; margin:0.5rem 0;">03:42</p>
+                            <span class="text-green">↑ 12% vs last week</span>
+                        </div>
+                        <div class="stat-card border-blue">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">Bounce Rate</h3>
+                            <p style="color:var(--text-muted); font-size:1.5rem; font-weight:700; margin:0.5rem 0;">42.5%</p>
+                            <span class="text-green">↓ 5% vs last week</span>
+                        </div>
+                        <div class="stat-card border-yellow">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">Goal Conversions</h3>
+                            <p style="color:var(--text-muted); font-size:1.5rem; font-weight:700; margin:0.5rem 0;">18</p>
+                            <span class="text-green">↑ 2 from last week</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. SETTINGS SECTION -->
+                <div id="section-settings" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>System <span>Settings</span></h1>
+                        <p>Configure admin portal preferences.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:2rem;">
+                        <form style="display:flex; flex-direction:column; gap:1.5rem; max-width:500px;">
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Admin Name</label>
+                                <input type="text" value="Jack Dawson" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                            </div>
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Admin Email</label>
+                                <input type="email" value="admin@stackly.com" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                            </div>
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Maintenance Mode</label>
+                                <select style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                                    <option value="off">Off (Live)</option>
+                                    <option value="on">On (Under Construction)</option>
+                                </select>
+                            </div>
+                            <button type="button" style="background:var(--primary); color:var(--bg-main); border:none; padding:0.8rem; border-radius:8px; font-weight:700; font-size:1rem; cursor:pointer; font-family:'Inter', sans-serif; margin-top:0.5rem;">Save Configuration</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div> <!-- End Dashboard Content -->
         </main>
     </div>
 
-    <script src="js/theme.js"></script>
+    <!-- Scripts -->
     <script src="js/dashboard.js"></script>
 </body>
 </html>
+

@@ -1,5 +1,35 @@
 // js/dashboard.js
 document.addEventListener('DOMContentLoaded', () => {
+    // Populate Sidebar Profile Card from localStorage
+    const savedEmail = localStorage.getItem('userEmail');
+    const savedRole = localStorage.getItem('userRole');
+    if(savedEmail) {
+        const sidebarEmail = document.getElementById('sidebarEmail');
+        const sidebarAvatar = document.getElementById('sidebarAvatar');
+        const sidebarName = document.getElementById('sidebarName');
+        const sidebarBadge = document.getElementById('sidebarBadge');
+        const navAvatarCircle = document.getElementById('navAvatarCircle');
+        
+        const username = savedEmail.split('@')[0];
+        const capitalizedName = username.charAt(0).toUpperCase() + username.slice(1);
+        const initial = username.charAt(0).toUpperCase();
+
+        if(sidebarEmail) sidebarEmail.textContent = savedEmail;
+        if(sidebarAvatar) sidebarAvatar.textContent = initial;
+        if(navAvatarCircle) navAvatarCircle.textContent = initial;
+        
+        // Update all name locations
+        const greetingName = document.getElementById('greetingName');
+        const navProfileName = document.getElementById('navProfileName');
+
+        if(sidebarName) sidebarName.textContent = capitalizedName;
+        if(greetingName) greetingName.textContent = capitalizedName;
+        if(navProfileName) navProfileName.textContent = capitalizedName;
+        
+        if(savedRole && sidebarBadge) {
+            sidebarBadge.textContent = savedRole.toUpperCase() + ' PANEL';
+        }
+    }
     // Sidebar Toggle
     const sidebar = document.querySelector('.dashboard-sidebar');
     const openBtn = document.querySelector('.open-sidebar');
@@ -73,4 +103,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+    // Tab Routing System
+    const navLinks = document.querySelectorAll('.sidebar-menu a[data-target]');
+    const sections = document.querySelectorAll('.dashboard-section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Remove active from all links
+            navLinks.forEach(l => l.classList.remove('active'));
+            // Add active to clicked link
+            link.classList.add('active');
+
+            // Hide all sections
+            sections.forEach(sec => {
+                sec.classList.remove('active');
+                sec.style.display = 'none';
+            });
+
+            // Show target section
+            const targetId = link.getAttribute('data-target');
+            const targetSec = document.getElementById(targetId);
+            if (targetSec) {
+                targetSec.classList.add('active');
+                targetSec.style.display = 'block';
+            }
+            
+            // Close sidebar on mobile after click
+            if (window.innerWidth <= 768 && sidebar) {
+                sidebar.classList.remove('active');
+            }
+        });
+    });
 });

@@ -19,22 +19,27 @@
                 </a>
                 <button class="close-sidebar d-md-none"><i class="ri-close-line"></i></button>
             </div>
-            
-            <div class="user-info text-center mt-4 mb-4">
-                <img src="assets/profile.webp" alt="User Profile" class="dashboard-avatar">
-                <h4>Alex Smith</h4>
-                <p class="text-muted text-sm">Pro Member</p>
+
+            <div class="sidebar-profile-card" id="sidebarProfileCard">
+                <div class="profile-avatar" id="sidebarAvatar">U</div>
+                <div class="profile-info">
+                    <h4 id="sidebarName">User</h4>
+                    <p id="sidebarEmail">user@example.com</p>
+                    <span class="profile-badge" id="sidebarBadge">USER PANEL</span>
+                </div>
             </div>
 
             <ul class="sidebar-menu">
-                <li><a href="userdashboard.html" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
-                <li><a href="#"><i class="ri-user-line"></i> My Profile</a></li>
-                <li><a href="#"><i class="ri-bookmark-line"></i> Saved Projects</a></li>
-                <li><a href="assets/resume.pdf" download><i class="ri-file-download-line"></i> Resume</a></li>
-                <li><a href="#"><i class="ri-message-3-line"></i> Messages</a></li>
-                <li><a href="#"><i class="ri-briefcase-line"></i> Freelance Requests</a></li>
-                <li><a href="#"><i class="ri-notification-3-line"></i> Notifications</a></li>
-                <li><a href="#"><i class="ri-settings-4-line"></i> Settings</a></li>
+                <li class="sidebar-category">MAIN</li>
+                <li><a href="#" data-target="section-dashboard" class="active"><i class="ri-dashboard-line"></i> Dashboard</a></li>
+                <li><a href="#" data-target="section-projects"><i class="ri-user-line"></i> My Projects</a></li>
+                <li><a href="#" data-target="section-consultations"><i class="ri-briefcase-line"></i> Consultations</a></li>
+                <li class="sidebar-category">RESOURCES</li>
+                <li><a href="#" data-target="section-resume"><i class="ri-file-download-line"></i> Resume</a></li>
+                <li><a href="#" data-target="section-messages"><i class="ri-message-3-line"></i> Messages</a></li>
+                <li><a href="#" data-target="section-saved"><i class="ri-bookmark-line"></i> Saved Projects</a></li>
+                <li><a href="#" data-target="section-notifications"><i class="ri-notification-3-line"></i> Notifications</a></li>
+                <li><a href="#" data-target="section-settings"><i class="ri-settings-4-line"></i> Settings</a></li>
             </ul>
 
             <div class="sidebar-footer">
@@ -45,14 +50,22 @@
         <!-- Main Content -->
         <main class="dashboard-main">
             <!-- Top Navbar -->
-            <header class="dashboard-nav glass-card">
+            <header class="dashboard-nav">
                 <div class="nav-left">
                     <button class="open-sidebar d-md-none"><i class="ri-menu-line"></i></button>
-                    <h2>Overview</h2>
+                    <h2>Stackly Portfolio Platform</h2>
+                    <div class="mobile-logo"><img src="assets/logo.webp" alt="Stackly Logo" style="height: 28px;"></div>
                 </div>
                 <div class="nav-right">
+                    <div class="nav-actions">
+                        <button class="notification-btn">
+                            <i class="ri-notification-line"></i>
+                            <span class="notification-badge">2</span>
+                        </button>
+                    </div>
                     <div class="nav-profile">
-                        <img src="assets/profile.webp" alt="Profile">
+                        <div class="profile-avatar" id="navAvatarCircle" style="width: 35px; height: 35px; font-size: 1.2rem;">G</div>
+                        <span id="navProfileName">Alex Smith</span>
                     </div>
                 </div>
             </header>
@@ -60,35 +73,38 @@
             <!-- Dashboard Content -->
             <div class="dashboard-content">
                 
+                <!-- 1. DASHBOARD SECTION (Active by default) -->
+                <div id="section-dashboard" class="dashboard-section active">
+                <!-- Greeting -->
+                <div class="greeting-section">
+                    <h1>Welcome back, <span id="greetingName">Alex</span>!</h1>
+                    <p>Here's what's happening with your business today.</p>
+                </div>
+
+                <!-- Stats Grid -->
                 <div class="stats-grid mb-4">
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-briefcase-line"></i></div>
+                    <div class="stat-card border-blue">
                         <div class="stat-details">
                             <h3>12</h3>
                             <p>Recent Projects</p>
+                            <span class="text-green">↑ 20% from last month</span>
                         </div>
                     </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-heart-3-line"></i></div>
+                    <div class="stat-card border-green">
                         <div class="stat-details">
-                            <h3>24</h3>
+                            <h3>08</h3>
                             <p>Favorite Projects</p>
+                            <span class="text-green">↑ 14% from last month</span>
                         </div>
                     </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-download-cloud-2-line"></i></div>
+                    <div class="stat-card border-yellow">
                         <div class="stat-details">
-                            <h3>8</h3>
-                            <p>Downloads</p>
+                            <h3>92%</h3>
+                            <p>Success Rate</p>
+                            <span class="text-green">↑ 8% from last month</span>
                         </div>
                     </div>
-                    <div class="stat-card glass-card">
-                        <div class="stat-icon"><i class="ri-message-2-line"></i></div>
-                        <div class="stat-details">
-                            <h3>5</h3>
-                            <p>Messages</p>
-                        </div>
-                    </div>
+
                 </div>
 
                 <div class="dashboard-grid">
@@ -159,11 +175,236 @@
                     </div>
                 </div>
 
-            </div>
+                </div> <!-- End Dashboard Section -->
+
+                <!-- 2. MY PROJECTS SECTION -->
+                <div id="section-projects" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>My <span>Projects</span></h1>
+                        <p>Track your ongoing and completed projects.</p>
+                    </div>
+                    <div class="dashboard-grid">
+                        <div class="chart-card glass-card" style="padding:2rem;">
+                            <h3 style="margin-bottom:1rem; color:var(--text-main);">Ongoing Web Platform</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">A full-stack e-commerce solution with React and Node.js.</p>
+                            <div style="width:100%; background:var(--border-glass); height:8px; border-radius:4px; overflow:hidden;">
+                                <div style="width: 75%; height:100%; background:var(--primary);"></div>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.8rem; color:var(--text-muted);">
+                                <span>Progress</span>
+                                <span>75%</span>
+                            </div>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:2rem;">
+                            <h3 style="margin-bottom:1rem; color:var(--text-main);">Mobile App UI Redesign</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">Revamping the user experience for a fintech startup.</p>
+                            <div style="width:100%; background:var(--border-glass); height:8px; border-radius:4px; overflow:hidden;">
+                                <div style="width: 40%; height:100%; background:var(--primary);"></div>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.8rem; color:var(--text-muted);">
+                                <span>Progress</span>
+                                <span>40%</span>
+                            </div>
+                        </div>
+                        <div class="chart-card glass-card" style="padding:2rem;">
+                            <h3 style="margin-bottom:1rem; color:var(--text-main);">SaaS Dashboard Template</h3>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">Creating a premium dark-mode admin panel.</p>
+                            <div style="width:100%; background:var(--border-glass); height:8px; border-radius:4px; overflow:hidden;">
+                                <div style="width: 100%; height:100%; background:#10B981;"></div>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-top:0.5rem; font-size:0.8rem; color:var(--text-muted);">
+                                <span>Status</span>
+                                <span style="color:#10B981;">Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. CONSULTATIONS SECTION -->
+                <div id="section-consultations" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Scheduled <span>Consultations</span></h1>
+                        <p>Manage your upcoming meetings.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:2rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-glass); padding-bottom:1rem; margin-bottom:1rem;">
+                            <div>
+                                <h4 style="color:var(--text-main); margin-bottom:0.25rem;">Project Discovery Call</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem;"><i class="ri-calendar-line"></i> Tomorrow, 10:00 AM PST</p>
+                            </div>
+                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer;">Join Meet</button>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--border-glass); padding-bottom:1rem; margin-bottom:1rem;">
+                            <div>
+                                <h4 style="color:var(--text-main); margin-bottom:0.25rem;">Weekly Status Sync</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem;"><i class="ri-calendar-line"></i> Wed, 2:30 PM PST</p>
+                            </div>
+                            <button style="background:var(--primary); color:var(--bg-main); border:none; padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer;">Join Meet</button>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                                <h4 style="color:var(--text-main); margin-bottom:0.25rem;">Design Handoff Review</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem;"><i class="ri-calendar-line"></i> Fri, 11:00 AM PST</p>
+                            </div>
+                            <button style="background:transparent; color:var(--primary); border:1px solid var(--primary); padding:0.5rem 1rem; border-radius:8px; font-weight:600; cursor:pointer;">Reschedule</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. MESSAGES SECTION -->
+                <div id="section-messages" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Your <span>Messages</span></h1>
+                        <p>Communicate with clients and team members.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:1rem;">
+                        <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
+                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(0, 242, 254, 0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700;">A</div>
+                            <div style="flex:1;">
+                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Alice Johnson</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Hey, just checking in on the new wireframes...</p>
+                            </div>
+                            <span style="font-size:0.75rem; color:var(--text-muted);">2m ago</span>
+                        </div>
+                        <div style="display:flex; gap:1rem; padding:1rem; border-bottom:1px solid var(--border-glass); align-items:center;">
+                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(16, 185, 129, 0.1); color:#10B981; display:flex; align-items:center; justify-content:center; font-weight:700;">M</div>
+                            <div style="flex:1;">
+                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Mark Spencer</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">The latest deployment looks fantastic on mobile.</p>
+                            </div>
+                            <span style="font-size:0.75rem; color:var(--text-muted);">1h ago</span>
+                        </div>
+                        <div style="display:flex; gap:1rem; padding:1rem; align-items:center;">
+                            <div style="width:40px; height:40px; border-radius:50%; background:rgba(245, 158, 11, 0.1); color:#F59E0B; display:flex; align-items:center; justify-content:center; font-weight:700;">S</div>
+                            <div style="flex:1;">
+                                <h4 style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.1rem;">Sarah Connor</h4>
+                                <p style="color:var(--text-muted); font-size:0.85rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:400px;">Can we schedule a quick sync for tomorrow?</p>
+                            </div>
+                            <span style="font-size:0.75rem; color:var(--text-muted);">Yesterday</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. SAVED PROJECTS SECTION -->
+                <div id="section-saved" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Saved <span>Projects</span></h1>
+                        <p>Inspiration and resources you've bookmarked.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-card border-green">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">SaaS Landing Page</h3>
+                            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Dark theme template</p>
+                            <a href="404.html" style="color:var(--primary); text-decoration:none; font-size:0.85rem; font-weight:600;">View Details <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="stat-card border-blue">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">E-commerce UI Kit</h3>
+                            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Figma components collection</p>
+                            <a href="404.html" style="color:var(--primary); text-decoration:none; font-size:0.85rem; font-weight:600;">View Details <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <div class="stat-card border-purple">
+                            <h3 style="font-size:1.2rem; color:var(--text-main);">Portfolio React Theme</h3>
+                            <p style="color:var(--text-muted); font-size:0.85rem; margin-bottom:1rem;">Personal branding site</p>
+                            <a href="404.html" style="color:var(--primary); text-decoration:none; font-size:0.85rem; font-weight:600;">View Details <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. NOTIFICATIONS SECTION -->
+                <div id="section-notifications" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Recent <span>Notifications</span></h1>
+                        <p>Stay up to date with your account activity.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:1.5rem;">
+                        <ul class="timeline" style="list-style:none; padding:0; margin:0; border-left:2px solid var(--border-glass); margin-left:10px;">
+                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
+                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:var(--primary);"></span>
+                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Invoice Paid</p>
+                                <span style="font-size:0.8rem; color:var(--text-muted);">Thank you for your payment on Invoice #0012. (1 hour ago)</span>
+                            </li>
+                            <li style="position:relative; padding-left:1.5rem; margin-bottom:1.5rem;">
+                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#10B981;"></span>
+                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">New Consultation Booked</p>
+                                <span style="font-size:0.8rem; color:var(--text-muted);">Alice Johnson booked a discovery call for tomorrow. (3 hours ago)</span>
+                            </li>
+                            <li style="position:relative; padding-left:1.5rem;">
+                                <span style="position:absolute; left:-6px; top:0; width:10px; height:10px; border-radius:50%; background:#F59E0B;"></span>
+                                <p style="color:var(--text-main); font-size:0.95rem; margin-bottom:0.2rem;">Security Alert</p>
+                                <span style="font-size:0.8rem; color:var(--text-muted);">New login from Chrome on Windows. (Yesterday)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. SETTINGS SECTION -->
+                <div id="section-settings" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>Account <span>Settings</span></h1>
+                        <p>Update your personal information and preferences.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:2rem;">
+                        <form style="display:flex; flex-direction:column; gap:1.5rem; max-width:500px;">
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Display Name</label>
+                                <input type="text" value="Alex Smith" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                            </div>
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Email Address</label>
+                                <input type="email" value="alex@example.com" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                            </div>
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">New Password</label>
+                                <input type="password" placeholder="Enter new password" style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                            </div>
+                            <div>
+                                <label style="display:block; color:var(--text-muted); font-size:0.85rem; margin-bottom:0.5rem; text-transform:uppercase; letter-spacing:1px;">Email Notifications</label>
+                                <select style="width:100%; background:var(--bg-main); border:1px solid var(--border-glass); padding:0.8rem 1rem; border-radius:8px; color:var(--text-main); outline:none; font-family:'Inter', sans-serif;">
+                                    <option value="all">All Notifications</option>
+                                    <option value="important">Important Only</option>
+                                    <option value="none">None</option>
+                                </select>
+                            </div>
+                            <button type="button" style="background:var(--primary); color:var(--bg-main); border:none; padding:0.8rem; border-radius:8px; font-weight:700; font-size:1rem; cursor:pointer; font-family:'Inter', sans-serif; margin-top:0.5rem;">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- 8. RESUME SECTION -->
+                <div id="section-resume" class="dashboard-section" style="display:none;">
+                    <div class="greeting-section">
+                        <h1>My <span>Resume</span></h1>
+                        <p>View or download your professional resume.</p>
+                    </div>
+                    <div class="chart-card glass-card" style="padding:2rem;">
+                        <div style="display:flex; align-items:center; gap:2rem; margin-bottom:2rem;">
+                            <div style="width:80px; height:80px; border-radius:16px; background:rgba(0, 242, 254, 0.1); color:var(--primary); display:flex; align-items:center; justify-content:center; font-size:2.5rem;">
+                                <i class="ri-file-text-line"></i>
+                            </div>
+                            <div>
+                                <h3 style="color:var(--text-main); margin-bottom:0.25rem;">Alex Smith - Full Stack Developer</h3>
+                                <p style="color:var(--text-muted); margin-bottom:1rem;">Updated: July 2026 • PDF Format • 1.2 MB</p>
+                                <div style="display:flex; gap:1rem;">
+                                    <a href="assets/resume.pdf" target="_blank" style="background:var(--bg-main); border:1px solid var(--border-glass); color:var(--text-main); padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:600;"><i class="ri-eye-line"></i> Preview</a>
+                                    <a href="assets/resume.pdf" download style="background:var(--primary); color:var(--bg-main); padding:0.6rem 1.2rem; border-radius:8px; text-decoration:none; font-weight:700;"><i class="ri-download-line"></i> Download PDF</a>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 style="color:var(--text-main); margin-bottom:1rem; border-bottom:1px solid var(--border-glass); padding-bottom:0.5rem;">Resume Highlights</h4>
+                        <ul style="color:var(--text-muted); padding-left:1.5rem; line-height:1.8;">
+                            <li>5+ years of experience in building scalable web applications.</li>
+                            <li>Expertise in React, Node.js, and modern CSS frameworks.</li>
+                            <li>Proven track record of improving application performance by 40%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div> <!-- End Dashboard Content -->
         </main>
     </div>
 
-    <script src="js/theme.js"></script>
+    <!-- Scripts -->
     <script src="js/dashboard.js"></script>
 </body>
 </html>
+

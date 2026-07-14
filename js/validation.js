@@ -74,7 +74,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if(password.value.trim() === '') { setStatus(password, 'error'); isValid = false; } else { setStatus(password, 'success'); }
             
             if(isValid) {
-                window.location.href = 'userdashboard.html';
+                localStorage.setItem('userEmail', email.value);
+                const activeRole = document.querySelector('.role-btn.active');
+                if(activeRole && activeRole.id === 'role-admin') {
+                    localStorage.setItem('userRole', 'Admin');
+                    window.location.href = 'admindashboard.html';
+                } else {
+                    localStorage.setItem('userRole', 'User');
+                    window.location.href = 'userdashboard.html';
+                }
             }
         });
     }
@@ -111,7 +119,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             if(isValid) {
-                window.location.href = 'userdashboard.html';
+                localStorage.setItem('userEmail', email.value);
+                const activeRole = document.querySelector('.role-btn.active');
+                if(activeRole && activeRole.id === 'role-admin') {
+                    localStorage.setItem('userRole', 'Admin');
+                    window.location.href = 'admindashboard.html';
+                } else {
+                    localStorage.setItem('userRole', 'User');
+                    window.location.href = 'userdashboard.html';
+                }
             }
         });
     }
