@@ -107,6 +107,22 @@
 
                 </div>
 
+                <!-- Charts Section -->
+                <div class="charts-grid mb-4" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; margin-bottom: 2rem;">
+                    <div class="chart-card glass-card" style="padding: 1.5rem; border-radius: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-main);">Project Activity (Last 6 Months)</h3>
+                        <div style="position: relative; height: 300px; width: 100%;">
+                            <canvas id="userBarChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card glass-card" style="padding: 1.5rem; border-radius: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-main);">Project Distribution</h3>
+                        <div style="position: relative; height: 300px; width: 100%; display: flex; justify-content: center;">
+                            <canvas id="userPieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="dashboard-grid">
                     <!-- Activity Timeline -->
                     <div class="glass-card activity-card">
@@ -547,7 +563,7 @@
                                     <label>Bio / Company</label>
                                 </div>
                                 <div style="grid-column: 1 / -1;">
-                                    <button class="btn-auth btn-animated" style="width: auto; padding: 0.8rem 2rem;" onclick="document.querySelector('[data-target=\'section-dashboard\']').click()">Save Changes</button>
+                                    <button class="btn btn-primary" style="width: auto; padding: 0.8rem 2rem;" onclick="document.querySelector('[data-target=\'section-dashboard\']').click()">Save Changes</button>
                                 </div>
                             </div>
                         </div>
@@ -564,7 +580,7 @@
                                     <label>New Password</label>
                                 </div>
                                 <div>
-                                    <button class="btn-auth btn-animated" style="width: auto; padding: 0.8rem 2rem;" onclick="document.querySelector('[data-target=\'section-dashboard\']').click()">Update Password</button>
+                                    <button class="btn btn-primary" style="width: auto; padding: 0.8rem 2rem;" onclick="document.querySelector('[data-target=\'section-dashboard\']').click()">Update Password</button>
                                 </div>
                             </div>
                         </div>
@@ -663,7 +679,9 @@
     </div>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/dashboard.js"></script>
+    <script src="js/user-charts.js"></script>
 </body>
 </html>
 

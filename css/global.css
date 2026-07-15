@@ -267,6 +267,22 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
   font-size: 1.8rem;
   cursor: pointer;
+  z-index: 1001; /* Ensure it stays above everything */
+}
+
+/* Beautiful closing animation */
+.menu-toggle i {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), color 0.4s ease;
+}
+
+.menu-toggle i.ri-close-line {
+  transform: rotate(180deg);
+  color: var(--primary); /* Cyan highlight on close */
+}
+
+.menu-toggle i.ri-menu-3-line {
+  transform: rotate(0deg);
 }
 
 /* Footer */
@@ -563,6 +579,11 @@ h1, h2, h3, h4, h5, h6 {
   .menu-toggle {
     display: block;
     z-index: 1001;
+  }
+
+  .nav-logo {
+    position: relative;
+    z-index: 1002;
   }
 }
 @media (max-width: 768px) {

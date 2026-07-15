@@ -321,3 +321,11 @@ input[type="checkbox"] {
 
 .auth-logo img { height: 30px; width: auto; object-fit: contain; }
 
+
+
+@media (max-width: 768px) {
+  .auth-left { display: none; }
+  .auth-right { width: 100%; min-height: 100vh; height: auto; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; padding: 2.5rem 1rem 2rem 1rem; }
+  .auth-card { margin: 0 auto; width: 100%; max-width: 450px; }
+  .back-home { position: relative; top: auto; right: auto; transform: none; margin-bottom: 2rem; width: max-content; }
+}

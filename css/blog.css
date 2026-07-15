@@ -131,8 +131,8 @@
   .series-card, .author-container { flex-direction: column; text-align: center; }
   .series-list li { justify-content: center; }
   .author-socials { justify-content: center; }
-  .newsletter-form { flex-direction: column; align-items: center; }
-  .newsletter-form input { width: 100%; }
+  .newsletter-form { flex-direction: column; align-items: stretch; margin: 0 auto; max-width: 350px; }
+  .newsletter-form input, .newsletter-form .btn { width: 100%; }
 }
 
 @media (max-width: 576px) { .series-content h2 { font-size: 1.8rem; } }
